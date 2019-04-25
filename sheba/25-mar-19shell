@@ -1,0 +1,50 @@
+student@T39:~$ gedit if.sh
+student@T39:~$ chmod +x if.sh
+student@T39:~$ ./if.sh
+enter the number:4
+positive
+student@T39:~$ 
+student@T39:~$ 
+student@T39:~$ ./if.sh
+enter the number:-6
+negative
+student@T39:~$ ./if.sh
+enter the number:0
+zero
+student@T39:~$ chmod +x fi1.sh
+student@T39:~$ chmod +x fi1.sh
+student@T39:~$ ./fi1.sh tues
+the typed argument is neither Monday nor tuesday
+student@T39:~$ ./fi1.sh Monday
+the typed argument is Monday
+student@T39:~$ chmod +x for.sh
+student@T39:~$ ./for.sh
+3 times 5 is 15
+2 times 5 is 10
+5 times 5 is 25
+7 times 5 is 35
+student@T39:~$ chmod +x for1.sh
+student@T39:~$ ./for1.sh
+Welcome 1 times
+Welcome 2 times
+Welcome 3 times
+Welcome 4 times
+Welcome 5 times
+student@T39:~$ chmod +x for2.sh
+student@T39:~$ ./for2.sh
+Welcome 0 times
+Welcome 2 times
+Welcome 4 times
+Welcome 6 times
+Welcome 8 times
+Welcome 10 times
+student@T39:~$ gedit for3.sh
+student@T39:~$ chmod +x for3.sh
+student@T39:~$ ./for3.sh
+Welcome 1 times
+Welcome 2 times
+Welcome 3 times
+Welcome 4 times
+Welcome 5 times
+student@T39:~$ gedit forin.sh
+

@@ -1,0 +1,91 @@
+server
+student@T39:~$ gedit l.sh
+student@T39:~$ chmod +x l.sh
+student@T39:~$ ./l.sh
+enter a year
+2012
+./l.sh: line 3: syntax error near unexpected token `('
+./l.sh: line 3: `if [ $ (( n % 4 )) -eq 0 ]'
+student@T39:~$ ./l.sh
+enter a year
+2012
+2012 is leap
+./l.sh: line 19: syntax error near unexpected token `else'
+./l.sh: line 19: `else "$n is not leap"'
+student@T39:~$ gedit client.sh
+student@T39:~$ gedit server.sh
+student@T39:~$ gedit client.sh
+student@T39:~$ gedit client.sh
+student@T39:~$ javac Server.java
+javac: file not found: Server.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+student@T39:~$ javac server.java
+javac: file not found: server.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+student@T39:~$ gedit server.sh
+student@T39:~$ gedit Server.sh
+student@T39:~$ javac Server.java
+javac: file not found: Server.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+student@T39:~$ gedit Server.java
+student@T39:~$ javac Server.java
+student@T39:~$ java Server
+waiting for client.........
+client connected 
+client:>hai 
+how are you
+client:>how are you
+ok
+client:>fine
+
+
+
+
+
+client
+student@T39:~$ gedit Client.java
+student@T39:~$ javac Client.java
+Client.java:5: error: ';' expected
+        public static void main(String[] args) throws IOException 
+                                                                 ^
+Client.java:8: error: <identifier> expected
+                System.out.println("Client connected to the server");
+                                  ^
+Client.java:8: error: illegal start of type
+                System.out.println("Client connected to the server");
+                                   ^
+Client.java:17: error: <identifier> expected
+                System.out.println("to Start the chat, type message and press Enter key"); 
+                                  ^
+Client.java:17: error: illegal start of type
+                System.out.println("to Start the chat, type message and press Enter key"); 
+                                   ^
+Client.java:19: error: illegal start of type
+                while(true)
+                ^
+Client.java:19: error: illegal start of type
+                while(true)
+                      ^
+Client.java:35: error: class, interface, or enum expected
+}
+^
+8 errors
+student@T39:~$ javac Client.java
+student@T39:~$ java Client
+Client connected to the server
+to Start the chat, type message and press Enter key
+hai 
+how are you
+server:>how are you
+fine
+server:>ok
+^Cstudent@T39:~$ chmod +x sumodd.sh
+student@T39:~$ ./sumodd.sh
+limit is
+5
+9
+student@T39:~$ 
+

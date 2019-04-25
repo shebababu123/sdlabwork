@@ -1,0 +1,65 @@
+student@T39:~$ vi sheba.sh
+student@T39:~$ chmod +x sheba.sh
+student@T39:~$ ./ sheba.sh
+bash: ./: Is a directory
+student@T39:~$ ./sheba.sh
+hello
+student@T39:~$ gedit sample.sh
+student@T39:~$ chmod +x sample.sh
+student@T39:~$ ./sample.sh
+welcom
+student@T39:~$ gedit myfirstscript.sh
+student@T39:~$ chmod +x myfirstscript.sh
+student@T39:~$ ./myfirstscript.sh
+Hello World!
+The date today is Thu Mar 21 14:30:21 IST 2019
+The current directory is /home/student
+student@T39:~$ gedit quo.sh
+student@T39:~$ chmod +x quo.sh
+student@T39:~$ ./quo.sh
+value of var is test string
+student@T39:~$ gedit sin.sh
+student@T39:~$ chmod +x sin.sh
+student@T39:~$ ./sin.sh
+value of var is $var
+student@T39:~$ gedit pass.sh
+student@T39:~$ chmod +x pass.sh
+student@T39:~$ ./pass.sh a b c d
+the command is ./pass.sh
+the first argument is a
+the second argument is b
+the third command is c
+the fourth argument is d
+student@T39:~$ gedit p.sh
+student@T39:~$ chmod +x pass.sh
+student@T39:~$ ./pass.sh 1 2 3 4
+the command is ./pass.sh
+the first argument is 1
+the second argument is 2
+the third command is 3
+the fourth argument is 4
+the command is 4
+the command is 1 2 3 4
+the command is 1 2 3 4
+student@T39:~$ gedit s.sh
+student@T39:~$ chmod +x s.sh
+student@T39:~$ ./s.sh
+
+student@T39:~$ gedit sa.sh
+student@T39:~$ chmod + sa.sh
+student@T39:~$ ./sa.sh
+bash: ./sa.sh: Permission denied
+student@T39:~$ chmod +x sa.sh
+student@T39:~$ ./sa.sh
+6+90=96
+student@T39:~$ gedit read.sh
+student@T39:~$ chmod +x read.sh
+student@T39:~$ ./read.sh
+Enter two numbers:3 4
+3+4=7
+student@T39:~$ gedit ex.sh
+student@T39:~$ chmod +x ex.sh
+student@T39:~$ ./ex.sh
+sum is 44
+student@T39:~$ 
+

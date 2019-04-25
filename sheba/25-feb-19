@@ -1,0 +1,248 @@
+student@T39:~$ cd clg
+student@T39:~/clg$ cd user
+student@T39:~/clg/user$ ls
+f1.txt  f2.txt
+student@T39:~/clg/user$ man paste
+student@T39:~/clg/user$ paste f1.txt f2.txt
+kottayam	pta
+kanoor	ekm
+tvm	ermly
+a	g	hu	kottayam
+as	gg	kj	vayanad
+er	gg	jhu	ernakulam
+	sd	dd	
+student@T39:~/clg/user$ touch f3.txt
+student@T39:~/clg/user$ cat > f3.txt
+pnkm
+vazoor
+pala
+kply
+ermly
+^C
+student@T39:~/clg/user$ paste -d f1.txt f2.txt f3.txt
+ptafpnkm
+ekmfvazoor
+ermlyfpala
+kottayamfkply
+vayanadfermly
+ernakulamf
+student@T39:~/clg/user$ cat f1.txt
+kottayam
+kanoor
+tvm
+a	g	hu
+as	gg	kj
+er	gg	jhu
+	sd	dd
+student@T39:~/clg/user$ paste -d "|" f1.txt f2.txt f3.txt
+kottayam|pta|pnkm
+kanoor|ekm|vazoor
+tvm|ermly|pala
+a	g	hu|kottayam|kply
+as	gg	kj|vayanad|ermly
+er	gg	jhu|ernakulam|
+	sd	dd||
+student@T39:~/clg/user$ paste -d "|," f1.txt f2.txt f3.txt
+kottayam|pta,pnkm
+kanoor|ekm,vazoor
+tvm|ermly,pala
+a	g	hu|kottayam,kply
+as	gg	kj|vayanad,ermly
+er	gg	jhu|ernakulam,
+	sd	dd|,
+student@T39:~/clg/user$ paste -s -d ":" f1.txt f2.txt f3.txt
+kottayam:kanoor:tvm:a	g	hu:as	gg	kj:er	gg	jhu:	sd	dd
+pta:ekm:ermly:kottayam:vayanad:ernakulam
+pnkm:vazoor:pala:kply:ermly
+student@T39:~/clg/user$ paste --version
+paste (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by David M. Ihnat and David MacKenzie.
+student@T39:~/clg/user$ paste -s f1.txt
+kottayam	kanoor	tvm	a	g	hu	as	gg	kj	er	gg	jhu		sd	dd
+student@T39:~/clg/user$ paste -s f1.txt f2.txt f3.txt
+kottayam	kanoor	tvm	a	g	hu	as	gg	kj	er	gg	jhu		sd	dd
+pta	ekm	ermly	kottayam	vayanad	ernakulam
+pnkm	vazoor	pala	kply	ermly
+student@T39:~/clg/user$ paste - - <f3.txt
+pnkm	vazoor
+pala	kply
+ermly	
+student@T39:~/clg/user$ paste - - - <f3.txt
+pnkm	vazoor	pala
+kply	ermly	
+student@T39:~/clg/user$ cat > f6.txt
+A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants (plants of the division Magnoliophyta, also called angiosperms). The biological function of a flower is to effect reproduction, usually by providing a mechanism for the union of sperm with eggs. Flowers may facilitate outcrossing (fusion of sperm and eggs from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower). Some flowers produce diaspores without fertilization (parthenocarpy). Flowers contain sporangia and are the site where gametophytes develop. Many flowers have evolved to be attractive to animals, so as to cause them to be vectors for the transfer of pollen. After fertilization, the ovary of the flower develops into fruit containing seeds. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^C
+student@T39:~/clg/user$ cat > f7.txt
+A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants (plants of the division Magnoliophyta, also called angiosperms). The biological function of a flower is to effect reproduction, usually by providing a mechanism for the union of sperm with eggs. Flowers may facilitate outcrossing (fusion of sperm and eggs from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower). Some flowers produce diaspores without fertilization (parthenocarpy). Flowers contain sporangia and are the site where gametophytes develop. Many flowers have evolved to be attractive to animals, so as to cause them to be vectors for the transfer of pollen. After fertilization, the ovary of the flower develops into fruit containing seeds. 
+
+In addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+
+The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle. The four main whorls (starting from the base of the flower or lowest node and working upwards) are as follows: 
+consisting of units called stamens. Stamens consist of two parts: a stalk called a filament, topped by an anther where pollen is produced by meiosis and eventually dispersed.
+Gynoecium (from Greek gynaikos oikia: woman's house): the innermost whorl of a flower, consisting of one or more units called carpels. The carpel or multiple fused carpels form a hollow structure called an ovary, which produces ovules internally. Ovules are megasporangia and they in turn produce megaspores by meiosis which develop into female gametophytes. These give rise to egg cells. The gynoecium of a flower is also described using an alternative terminology wherein the structure one sees in the innermost whorl (consisting of an ovary, style and stigma) is called a pistil. A pistil may consist of a single carpel or a number of carpels fused together. The sticky tip of the pistil, the stigma, is the receptor of pollen. The supportive stalk, the style, becomes the pathway for pollen tubes to grow from pollen grains adhering to the stigma. The relationship to the gynoecium on the receptacle is described as hypogynous (beneath a superior ovary), perigynous (surrounding a superior ovary), or epigynous (above inferior ovary).
+^C
+student@T39:~/clg/user$ more f7.txt
+A flower, sometimes known as a bloom or blossom, is the reproductive structure f
+ound in flowering plants (plants of the division Magnoliophyta, also called angi
+osperms). The biological function of a flower is to effect reproduction, usually
+ by providing a mechanism for the union of sperm with eggs. Flowers may facilita
+te outcrossing (fusion of sperm and eggs from different individuals in a populat
+ion) or allow selfing (fusion of sperm and egg from the same flower). Some flowe
+rs produce diaspores without fertilization (parthenocarpy). Flowers contain spor
+angia and are the site where gametophytes develop. Many flowers have evolved to 
+be attractive to animals, so as to cause them to be vectors for the transfer of 
+pollen. After fertilization, the ovary of the flower develops into fruit contain
+ing seeds. 
+
+In addition to facilitating the reproduction of flowering plants, flowers have l
+ong been admired and used by humans to bring beauty to their environment, and al
+so as objects of romance, ritual, religion, medicine and as a source of food. 
+
+The essential parts of a flower can be considered in two parts: the vegetative p
+art, consisting of petals and associated structures in the perianth, and the rep
+roductive or sexual parts. A stereotypical flower consists of four kinds of stru
+ctures attached to the tip of a short stalk. Each of these kinds of parts is arr
+anged in a whorl on the receptacle. The four main whorls (starting from the base
+ of the flower or lowest node and working upwards) are as follows: 
+consisting of units called stamens. Stamens consist of two parts: a stalk called
+ a filament, topped by an anther where pollen is produced by meiosis and eventua
+student@T39:~/clg/user$ more -f f7.txt
+A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants (plants of the division Magnoliophyta, also called angiosperms). The biological function of a flower is to effect reproduction, usually by providing a mechanism for the union of sperm with eggs. Flowers may fac
+ilitate outcrossing (fusion of sperm and eggs from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower). Some flowers produce diaspores without fertilization (parthenocarpy). Flowers contain sporangia and are the site where gametophytes develop. Many flowers have e
+volved to be attractive to animals, so as to cause them to be vectors for the transfer of pollen. After fertilization, the ovary of the flower develops into fruit containing seeds. 
+
+In addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+
+The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts i
+s arranged in a whorl on the receptacle. The four main whorls (starting from the base of the flower or lowest node and working upwards) are as follows: 
+consisting of units called stamens. Stamens consist of two parts: a stalk called a filament, topped by an anther where pollen is produced by meiosis and eventually dispersed.
+Gynoecium (from Greek gynaikos oikia: woman's house): the innermost whorl of a flower, consisting of one or more units called carpels. The carpel or multiple fused carpels form a hollow structure called an ovary, which produces ovules internally. Ovules are megasporangia and they in turn produce megaspores by meio
+sis which develop into female gametophytes. These give rise to egg cells. The gynoecium of a flower is also described using an alternative terminology wherein the structure one sees in the innermost whorl (consisting of an ovary, style and stigma) is called a pistil. A pistil may consist of a single carpel or a nu
+mber of carpels fused together. The sticky tip of the pistil, the stigma, is the receptor of pollen. The supportive stalk, the style, becomes the pathway for pollen tubes to grow from pollen grains adhering to the stigma. The relationship to the gynoecium on the receptacle is described as hypogynous (beneath a sup
+erior ovary), perigynous (surrounding a superior ovary), or epigynous (above inferior ovary).
+student@T39:~/clg/user$ more -p f7.txt
+
+A flower, sometimes known as a bloom or blossom, is the reproductive structure f
+ound in flowering plants (plants of the division Magnoliophyta, also called angi
+osperms). The biological function of a flower is to effect reproduction, usually
+ by providing a mechanism for the union of sperm with eggs. Flowers may facilita
+te outcrossing (fusion of sperm and eggs from different individuals in a populat
+ion) or allow selfing (fusion of sperm and egg from the same flower). Some flowe
+rs produce diaspores without fertilization (parthenocarpy). Flowers contain spor
+angia and are the site where gametophytes develop. Many flowers have evolved to 
+be attractive to animals, so as to cause them to be vectors for the transfer of 
+pollen. After fertilization, the ovary of the flower develops into fruit contain
+ing seeds. 
+
+In addition to facilitating the reproduction of flowering plants, flowers have l
+ong been admired and used by humans to bring beauty to their environment, and al
+so as objects of romance, ritual, religion, medicine and as a source of food. 
+
+The essential parts of a flower can be considered in two parts: the vegetative p
+art, consisting of petals and associated structures in the perianth, and the rep
+roductive or sexual parts. A stereotypical flower consists of four kinds of stru
+ctures attached to the tip of a short stalk. Each of these kinds of parts is arr
+anged in a whorl on the receptacle. The four main whorls (starting from the base
+ of the flower or lowest node and working upwards) are as follows: 
+consisting of units called stamens. Stamens consist of two parts: a stalk called
+student@T39:~/clg/user$ more -s f7.txt
+A flower, sometimes known as a bloom or blossom, is the reproductive structure f
+ound in flowering plants (plants of the division Magnoliophyta, also called angi
+osperms). The biological function of a flower is to effect reproduction, usually
+ by providing a mechanism for the union of sperm with eggs. Flowers may facilita
+te outcrossing (fusion of sperm and eggs from different individuals in a populat
+ion) or allow selfing (fusion of sperm and egg from the same flower). Some flowe
+rs produce diaspores without fertilization (parthenocarpy). Flowers contain spor
+angia and are the site where gametophytes develop. Many flowers have evolved to 
+be attractive to animals, so as to cause them to be vectors for the transfer of 
+pollen. After fertilization, the ovary of the flower develops into fruit contain
+ing seeds. 
+
+In addition to facilitating the reproduction of flowering plants, flowers have l
+ong been admired and used by humans to bring beauty to their environment, and al
+so as objects of romance, ritual, religion, medicine and as a source of food. 
+
+The essential parts of a flower can be considered in two parts: the vegetative p
+art, consisting of petals and associated structures in the perianth, and the rep
+roductive or sexual parts. A stereotypical flower consists of four kinds of stru
+ctures attached to the tip of a short stalk. Each of these kinds of parts is arr
+anged in a whorl on the receptacle. The four main whorls (starting from the base
+ of the flower or lowest node and working upwards) are as follows: 
+consisting of units called stamens. Stamens consist of two parts: a stalk called
+student@T39:~/clg/user$ more +5 f7.txt
+The essential parts of a flower can be considered in two parts: the vegetative p
+art, consisting of petals and associated structures in the perianth, and the rep
+roductive or sexual parts. A stereotypical flower consists of four kinds of stru
+ctures attached to the tip of a short stalk. Each of these kinds of parts is arr
+anged in a whorl on the receptacle. The four main whorls (starting from the base
+ of the flower or lowest node and working upwards) are as follows: 
+consisting of units called stamens. Stamens consist of two parts: a stalk called
+ a filament, topped by an anther where pollen is produced by meiosis and eventua
+lly dispersed.
+Gynoecium (from Greek gynaikos oikia: woman's house): the innermost whorl of a f
+lower, consisting of one or more units called carpels. The carpel or multiple fu
+sed carpels form a hollow structure called an ovary, which produces ovules inter
+nally. Ovules are megasporangia and they in turn produce megaspores by meiosis w
+hich develop into female gametophytes. These give rise to egg cells. The gynoeci
+um of a flower is also described using an alternative terminology wherein the st
+ructure one sees in the innermost whorl (consisting of an ovary, style and stigm
+a) is called a pistil. A pistil may consist of a single carpel or a number of ca
+rpels fused together. The sticky tip of the pistil, the stigma, is the receptor 
+of pollen. The supportive stalk, the style, becomes the pathway for pollen tubes
+ to grow from pollen grains adhering to the stigma. The relationship to the gyno
+ecium on the receptacle is described as hypogynous (beneath a superior ovary), p
+erigynous (surrounding a superior ovary), or epigynous (above inferior ovary).
+student@T39:~/clg/user$ cat f7.txt
+A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants (plants of the division Magnoliophyta, also called angiosperms). The biological function of a flower is to effect reproduction, usually by providing a mechanism for the union of sperm with eggs. Flowers may facilitate outcrossing (fusion of sperm and eggs from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower). Some flowers produce diaspores without fertilization (parthenocarpy). Flowers contain sporangia and are the site where gametophytes develop. Many flowers have evolved to be attractive to animals, so as to cause them to be vectors for the transfer of pollen. After fertilization, the ovary of the flower develops into fruit containing seeds. 
+
+In addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+
+The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle. The four main whorls (starting from the base of the flower or lowest node and working upwards) are as follows: 
+consisting of units called stamens. Stamens consist of two parts: a stalk called a filament, topped by an anther where pollen is produced by meiosis and eventually dispersed.
+Gynoecium (from Greek gynaikos oikia: woman's house): the innermost whorl of a flower, consisting of one or more units called carpels. The carpel or multiple fused carpels form a hollow structure called an ovary, which produces ovules internally. Ovules are megasporangia and they in turn produce megaspores by meiosis which develop into female gametophytes. These give rise to egg cells. The gynoecium of a flower is also described using an alternative terminology wherein the structure one sees in the innermost whorl (consisting of an ovary, style and stigma) is called a pistil. A pistil may consist of a single carpel or a number of carpels fused together. The sticky tip of the pistil, the stigma, is the receptor of pollen. The supportive stalk, the style, becomes the pathway for pollen tubes to grow from pollen grains adhering to the stigma. The relationship to the gynoecium on the receptacle is described as hypogynous (beneath a superior ovary), perigynous (surrounding a superior ovary), or epigynous (above inferior ovary).
+student@T39:~/clg/user$ less -p "female" f7.txt
+student@T39:~/clg/user$ less -N f7.txt
+student@T39:~/clg/user$ less -n f7.txt
+student@T39:~/clg/user$ f7.txt | less -N
+student@T39:~/clg/user$ less -p female f7.txt
+student@T39:~/clg/user$ cat >f9.txt
+sadswdhjjhlljhdhsjhsagffghhhjsssssssssssssssssssssssskkkkkkkkkkkkkkkkkkkkkjjjddddd
+dddddd
+^C
+student@T39:~/clg/user$ less -N f9.txt
+student@T39:~/clg/user$ 
+

@@ -1,0 +1,259 @@
+student@T39:~$ cd clg
+student@T39:~/clg$ cd user
+student@T39:~/clg/user$ ls -al > list
+student@T39:~/clg/user$ cat list
+total 52
+drwxr-xr-x 2 student student 4096 Mar 14 14:40 .
+drwxr-xr-x 3 student student 4096 Feb 14 14:29 ..
+-rw-r--r-- 1 student student   53 Feb 25 11:27 f1.txt
+-rw-r--r-- 1 student student   41 Feb 25 11:28 f2.txt
+-rw-r--r-- 1 student student   28 Feb 25 11:51 f3.txt
+-rw-r--r-- 1 student student  840 Feb 25 12:00 f6.txt
+-rw-r--r-- 1 student student 2735 Feb 25 12:02 f7.txt
+-rw-r--r-- 1 student student   90 Feb 25 12:12 f9.txt
+-rw-r--r-- 1 student student   25 Feb 25 12:36 fil1.txt
+-rw-r--r-- 1 student student   21 Feb 25 12:37 fil2.txt
+-rw-r--r-- 1 student student   16 Feb 25 12:37 fil3.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:40 list
+-rw-r--r-- 1 student student    0 Feb 25 12:31 list.txt
+-rw-r--r-- 1 student student   78 Feb 25 12:32 s2.txt
+-rw-r--r-- 1 student student   78 Feb 25 12:32 s3.txt
+student@T39:~/clg/user$ ls
+f1.txt  f3.txt  f7.txt  fil1.txt  fil3.txt  list.txt  s3.txt
+f2.txt  f6.txt  f9.txt  fil2.txt  list      s2.txt
+student@T39:~/clg/user$ cat f2
+cat: f2: No such file or directory
+student@T39:~/clg/user$ cat f2.txt
+pta
+ekm
+ermly
+kottayam
+vayanad
+ernakulam
+student@T39:~/clg/user$ wc -l < f2.txt
+6
+student@T39:~/clg/user$ ls -a > f2.txt
+student@T39:~/clg/user$ cat f2.txt
+.
+..
+f1.txt
+f2.txt
+f3.txt
+f6.txt
+f7.txt
+f9.txt
+fil1.txt
+fil2.txt
+fil3.txt
+list
+list.txt
+s2.txt
+s3.txt
+student@T39:~/clg/user$ wc -l f2.txt
+15 f2.txt
+student@T39:~/clg/user$ cat f2.txt
+.
+..
+f1.txt
+f2.txt
+f3.txt
+f6.txt
+f7.txt
+f9.txt
+fil1.txt
+fil2.txt
+fil3.txt
+list
+list.txt
+s2.txt
+s3.txt
+student@T39:~/clg/user$ wc -l < f2.txt
+15
+student@T39:~/clg/user$ f2.txt 2 > errorfile
+f2.txt: command not found
+student@T39:~/clg/user$ f2.txt 2>errorfile
+student@T39:~/clg/user$ cat f2.txt
+.
+..
+f1.txt
+f2.txt
+f3.txt
+f6.txt
+f7.txt
+f9.txt
+fil1.txt
+fil2.txt
+fil3.txt
+list
+list.txt
+s2.txt
+s3.txt
+student@T39:~/clg/user$ f2.txt 1>errorfile
+f2.txt: command not found
+student@T39:~/clg/user$ f2 1>errorfile
+f2: command not found
+student@T39:~/clg/user$ f2 1 > errorfile.txt
+f2: command not found
+student@T39:~/clg/user$ cat f2.txt
+.
+..
+f1.txt
+f2.txt
+f3.txt
+f6.txt
+f7.txt
+f9.txt
+fil1.txt
+fil2.txt
+fil3.txt
+list
+list.txt
+s2.txt
+s3.txt
+student@T39:~/clg/user$ f2.txt 2>error1
+student@T39:~/clg/user$ cat error1
+f2.txt: command not found
+student@T39:~/clg/user$ f2.txt 1>output
+f2.txt: command not found
+student@T39:~/clg/user$ cat output
+student@T39:~/clg/user$ ls -l | more
+total 52
+-rw-r--r-- 1 student student   26 Mar 14 14:52 error1
+-rw-r--r-- 1 student student   53 Feb 25 11:27 f1.txt
+-rw-r--r-- 1 student student  102 Mar 14 14:42 f2.txt
+-rw-r--r-- 1 student student   28 Feb 25 11:51 f3.txt
+-rw-r--r-- 1 student student  840 Feb 25 12:00 f6.txt
+-rw-r--r-- 1 student student 2735 Feb 25 12:02 f7.txt
+-rw-r--r-- 1 student student   90 Feb 25 12:12 f9.txt
+-rw-r--r-- 1 student student   25 Feb 25 12:36 fil1.txt
+-rw-r--r-- 1 student student   21 Feb 25 12:37 fil2.txt
+-rw-r--r-- 1 student student   16 Feb 25 12:37 fil3.txt
+-rw-r--r-- 1 student student  816 Mar 14 14:40 list
+-rw-r--r-- 1 student student    0 Feb 25 12:31 list.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:52 output
+-rw-r--r-- 1 student student   78 Feb 25 12:32 s2.txt
+-rw-r--r-- 1 student student   78 Feb 25 12:32 s3.txt
+student@T39:~/clg/user$ cat f1.txt
+kottayam
+kanoor
+tvm
+a	g	hu
+as	gg	kj
+er	gg	jhu
+	sd	dd
+student@T39:~/clg/user$ cat f3.txt
+pnkm
+vazoor
+pala
+kply
+ermly
+student@T39:~/clg/user$ cat f3.txt | head -7 | tail -5
+pnkm
+vazoor
+pala
+kply
+ermly
+student@T39:~/clg/user$ cat f1.txt | head -7 | tail -5
+tvm
+a	g	hu
+as	gg	kj
+er	gg	jhu
+	sd	dd
+student@T39:~/clg/user$ ls
+error1  f2.txt  f6.txt  f9.txt    fil2.txt  list      output  s3.txt
+f1.txt  f3.txt  f7.txt  fil1.txt  fil3.txt  list.txt  s2.txt
+student@T39:~/clg/user$ cat f1.txt | head -4 | tail -2
+tvm
+a	g	hu
+student@T39:~/clg/user$ sort f1.txt | uniq
+a	g	hu
+as	gg	kj
+er	gg	jhu
+kanoor
+kottayam
+	sd	dd
+tvm
+student@T39:~/clg/user$ cat f1.txt
+kottayam
+kanoor
+tvm
+a	g	hu
+as	gg	kj
+er	gg	jhu
+	sd	dd
+student@T39:~/clg/user$ chmod u=rwx f1.txt
+student@T39:~/clg/user$ chmod u=r f2.txt
+student@T39:~/clg/user$ ls -l f2.txt
+-r--r--r-- 1 student student 102 Mar 14 14:42 f2.txt
+student@T39:~/clg/user$ chmod u=rwx,g=x,o=r f1.txt
+student@T39:~/clg/user$ ls -l f1.txt
+-rwx--xr-- 1 student student 53 Feb 25 11:27 f1.txt
+student@T39:~/clg/user$ chmod u=x,g=x,o=x f1.txt
+student@T39:~/clg/user$ ls -l f1.txt
+---x--x--x 1 student student 53 Feb 25 11:27 f1.txt
+student@T39:~/clg/user$ cat f1.txt
+cat: f1.txt: Permission denied
+student@T39:~/clg/user$ chmod u=r,g=r,o=rx f1.txt
+student@T39:~/clg/user$ ls -l f1.txt
+-r--r--r-x 1 student student 53 Feb 25 11:27 f1.txt
+student@T39:~/clg/user$ cat f3.txt
+pnkm
+vazoor
+pala
+kply
+ermly
+student@T39:~/clg/user$ chmod 754 f3.txt
+student@T39:~/clg/user$ ls -l f3.txt
+-rwxr-xr-- 1 student student 28 Feb 25 11:51 f3.txt
+student@T39:~/clg/user$ cat f4.txt
+cat: f4.txt: No such file or directory
+student@T39:~/clg/user$ cat f5.txt
+cat: f5.txt: No such file or directory
+student@T39:~/clg/user$ ls
+error1  f2.txt  f6.txt  f9.txt    fil2.txt  list      output  s3.txt
+f1.txt  f3.txt  f7.txt  fil1.txt  fil3.txt  list.txt  s2.txt
+student@T39:~/clg/user$ cat f6.txt
+A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants (plants of the division Magnoliophyta, also called angiosperms). The biological function of a flower is to effect reproduction, usually by providing a mechanism for the union of sperm with eggs. Flowers may facilitate outcrossing (fusion of sperm and eggs from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower). Some flowers produce diaspores without fertilization (parthenocarpy). Flowers contain sporangia and are the site where gametophytes develop. Many flowers have evolved to be attractive to animals, so as to cause them to be vectors for the transfer of pollen. After fertilization, the ovary of the flower develops into fruit containing seeds. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+student@T39:~/clg/user$ cat f3.txt
+pnkm
+vazoor
+pala
+kply
+ermly
+student@T39:~/clg/user$ ls -l f3.txt
+-rwxr-xr-- 1 student student 28 Feb 25 11:51 f3.txt
+student@T39:~/clg/user$ ls -l f6.txt
+-rw-r--r-- 1 student student 840 Feb 25 12:00 f6.txt
+student@T39:~/clg/user$ chmod u+x,u+w,o+w f6.txt
+student@T39:~/clg/user$ ls -l f6.txt
+-rwxr--rw- 1 student student 840 Feb 25 12:00 f6.txt
+student@T39:~/clg/user$ 
+

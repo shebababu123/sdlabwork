@@ -1,0 +1,246 @@
+student@T39:~$ cd clg
+student@T39:~/clg$ cd user
+student@T39:~/clg/user$ ls
+f1.txt  f2.txt  f3.txt  f6.txt  f7.txt  f9.txt
+student@T39:~/clg/user$ cat > s2.txt
+a
+b
+c
+g
+f
+d
+s
+a
+e
+e
+t
+h
+hj
+g
+f
+d
+^C
+student@T39:~/clg/user$ head s2.txt
+a
+b
+c
+g
+f
+d
+s
+a
+e
+e
+student@T39:~/clg/user$ head -n s2.txt
+head: invalid number of lines: ‘s2.txt’
+student@T39:~/clg/user$ cat s3.txt
+cat: s3.txt: No such file or directory
+student@T39:~/clg/user$ cat > s3.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+^C
+student@T39:~/clg/user$ head -n s3.txt
+head: invalid number of lines: ‘s3.txt’
+student@T39:~/clg/user$ head -n 3 s3.txt 
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+student@T39:~/clg/user$ head -q s2.txt s3.txt
+a
+b
+c
+g
+f
+d
+s
+a
+e
+e
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T39:~/clg/user$ head -v s3.txt
+==> s3.txt <==
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T39:~/clg/user$ head -c s3.txt
+head: invalid number of bytes: ‘s3.txt’
+student@T39:~/clg/user$ head -c 4 s3.txt
+Andhstudent@T39:~/clg/user$ head -c 6 s3.txt
+Andhrastudent@T39:~/clg/user$ tail s3.txt
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+student@T39:~/clg/user$ tail -n 5 s3.txt
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+student@T39:~/clg/user$ tail -5 s3.txt
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+student@T39:~/clg/user$ tail +25 s3.txt
+student@T39:~/clg/user$ tail -c 6 s3.txt
+aland
+student@T39:~/clg/user$ tail -c 4 s3.txt
+and
+student@T39:~/clg/user$ tail -c 9 s3.txt
+Nagaland
+student@T39:~/clg/user$ tail -c +25 s3.txt
+ Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+student@T39:~/clg/user$ tail -c +268 s3.txt
+student@T39:~/clg/user$ tail -c +245 s3.txt
+student@T39:~/clg/user$ tail -c +263 s3.txt
+student@T39:~/clg/user$ tail s2.txt s3.txt
+==> s2.txt <==
+s
+a
+e
+e
+t
+h
+hj
+g
+f
+d
+
+==> s3.txt <==
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+student@T39:~/clg/user$ tail -q s2.txt s3.txt
+s
+a
+e
+e
+t
+h
+hj
+g
+f
+d
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+student@T39:~/clg/user$ tail -f s3.txt
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+^C
+student@T39:~/clg/user$ tail -v s3.txt
+==> s3.txt <==
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+student@T39:~/clg/user$ tail --version
+tail (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Paul Rubin, David MacKenzie, Ian Lance Taylor,
+and Jim Meyering.
+student@T39:~/clg/user$ cat state.txt | head -n 20 | tail -n 5  > list.txt
+cat: state.txt: No such file or directory
+student@T39:~/clg/user$ cat s3.txt | head -n 8 | tail -n 9 > s2.txt
+student@T39:~/clg/user$ cat s2.txt | head -n 8 | tail -n 9 > s3.txt
+student@T39:~/clg/user$ cat s3.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+student@T39:~/clg/user$ 
+

@@ -1,0 +1,101 @@
+student@T39:~$ man echo
+student@T39:~$ mkdir ajce
+student@T39:~$ cd ajce
+student@T39:~/ajce$ mkdir mca
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ mkdir rmca
+student@T39:~/ajce/mca$ mkdir lmca
+student@T39:~/ajce/mca$ mkdir intmca
+student@T39:~/ajce/mca$ cd rmca
+student@T39:~/ajce/mca/rmca$ cd..
+cd..: command not found
+student@T39:~/ajce/mca/rmca$ cd ..
+student@T39:~/ajce/mca$ cd ~
+student@T39:~$ pwd
+/home/student
+student@T39:~$ cd ajce
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ cd /
+student@T39:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T39:/$ cd /
+student@T39:/$ pwd
+/
+student@T39:/$ cd ~
+student@T39:~$ pwd
+/home/student
+student@T39:~$ pwd
+/home/student
+student@T39:~$ ls
+ajce              expec.cpp   question-1.cpp  snap           tempmulty.o
+Desktop           expec.o     question-1.o    temp           temp.o
+Documents         Music       question_2      temp.cpp       Videos
+Downloads         Pictures    question_2.cpp  Templates
+examples.desktop  Public      question_2.o    tempmulty
+expec             question-1  sample          tempmulty.cpp
+student@T39:~$ cd ajce
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ ls
+intmca  lmca  rmca
+student@T39:~/ajce/mca$ ls -l
+total 12
+drwxr-xr-x 2 student student 4096 Jan 31 14:38 intmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:37 lmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:37 rmca
+student@T39:~/ajce/mca$ ls -a
+.  ..  intmca  lmca  rmca
+student@T39:~/ajce/mca$ ls -lh
+total 12K
+drwxr-xr-x 2 student student 4.0K Jan 31 14:38 intmca
+drwxr-xr-x 2 student student 4.0K Jan 31 14:37 lmca
+drwxr-xr-x 2 student student 4.0K Jan 31 14:37 rmca
+student@T39:~/ajce/mca$ ls -f
+lmca  rmca  intmca  ..  .
+student@T39:~/ajce/mca$ ls -r
+rmca  lmca  intmca
+student@T39:~/ajce/mca$ cd ..
+student@T39:~/ajce$ ls mca/rmca
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ ls >out.txt
+student@T39:~/ajce/mca$ ls -la
+total 24
+drwxr-xr-x 5 student student 4096 Jan 31 15:06 .
+drwxr-xr-x 3 student student 4096 Jan 31 14:36 ..
+drwxr-xr-x 2 student student 4096 Jan 31 14:38 intmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:37 lmca
+-rw-r--r-- 1 student student   25 Jan 31 15:06 out.txt
+drwxr-xr-x 2 student student 4096 Jan 31 14:37 rmca
+student@T39:~/ajce/mca$ ls
+intmca  lmca  out.txt  rmca
+student@T39:~/ajce/mca$ ls -t
+out.txt  intmca  lmca  rmca
+student@T39:~/ajce/mca$ cd rmca
+student@T39:~/ajce/mca/rmca$ echo 'hai'
+hai
+student@T39:~/ajce/mca/rmca$ ls
+student@T39:~/ajce/mca/rmca$ cd ..
+student@T39:~/ajce/mca$ cd ~
+student@T39:~$ read -p "enter your name"
+enter your namesheba
+student@T39:~$ cd ajce
+student@T39:~/ajce$ cd ..
+student@T39:~$ cd ajce
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ cd ~
+student@T39:~$ cd /
+student@T39:/$ cd ~
+student@T39:~$ cd ..
+student@T39:/home$ cd ~
+student@T39:~$ man mkdir
+student@T39:~$ man ls
+student@T39:~$ pwd
+/home/student
+student@T39:~$ man pwd
+student@T39:~$ cd ajce
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ pwd
+/home/student/ajce/mca
+student@T39:~/ajce/mca$ cd ~
+student@T39:~$ man ls
+student@T39:~$ 
+

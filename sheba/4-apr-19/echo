@@ -1,0 +1,35 @@
+server
+student@T70:~$ gedit Server2.java
+^C
+student@T70:~$ javac Server2.java
+student@T70:~$ java Server2
+Server is running...
+connection establised
+hai
+server send echo to client 
+server send echo to client 
+
+
+fne
+server send echo to client 
+Terminated..
+
+
+client
+
+student@T70:~$ gedit Client2.java
+student@T70:~$ javac Client2.java
+student@T70:~$ java Client2
+ Enter text..
+ if client 'quit' type  exit
+hii
+Server said : hii
+Enter text 
+how are you my dear
+Server said : how are you my dear
+Enter text 
+ok
+Server said : ok
+Enter text 
+^F^Cstudent@T70:~$ 
+

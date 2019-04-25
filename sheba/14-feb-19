@@ -1,0 +1,98 @@
+student@T39:~$ mkdir clg
+student@T39:~$ cd clg
+student@T39:~/clg$ mkdir user
+student@T39:~/clg$ cd user
+student@T39:~/clg/user$ touch f2.txt
+student@T39:~/clg/user$ cat >f2.txt
+hello
+whatsapp
+^C
+student@T39:~/clg/user$ cat f2.txt
+hello
+whatsapp
+student@T39:~/clg/user$ cp f2.txt /ajce/mca/lmca
+cp: cannot create regular file '/ajce/mca/lmca': No such file or directory
+student@T39:~/clg/user$ cp f2.txt /home/ajce/mca/lmca/
+cp: cannot create regular file '/home/ajce/mca/lmca/': No such file or directory
+student@T39:~/clg/user$ ls
+f2.txt
+student@T39:~/clg/user$ pwd
+/home/student/clg/user
+student@T39:~/clg/user$ cd ..
+student@T39:~/clg$ cd ..
+student@T39:~$ cd ajce
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ cd rmca
+'student@T39:~/ajce/mca/rmca$ ls
+a    d       f2.txt  f3.txt~  f5.txt  pqr    xyz
+abc  f1.txt  f3.txt  f4.txt   i.txt   p.txt
+student@T39:~/ajce/mca/rmca$ cp a /home/student/clg/user
+cp: -r not specified; omitting directory 'a'
+student@T39:~/ajce/mca/rmca$ cp p.txt /home/student/clg/user
+student@T39:~/ajce/mca/rmca$ cp -R a /home/student/clg/user
+student@T39:~/ajce/mca/rmca$ cp f4.txt /home/student/clg/user/
+student@T39:~/ajce/mca/rmca$ cd cld
+bash: cd: cld: No such file or directory
+student@T39:~/ajce/mca/rmca$ cd ..
+student@T39:~/ajce/mca$ cd ~
+student@T39:~$ cd clg
+student@T39:~/clg$ cd user
+student@T39:~/clg/user$ ls
+a  f2.txt  f4.txt  p.txt
+student@T39:~/clg/user$ rm f2.txt
+student@T39:~/clg/user$ ls
+a  f4.txt  p.txt
+student@T39:~/clg/user$ touch f3.txt
+student@T39:~/clg/user$ cat >f3.txt
+hujgt
+^C
+student@T39:~/clg/user$ rm f3.txt f2.txt
+rm: cannot remove 'f2.txt': No such file or directory
+student@T39:~/clg/user$ rm f3.txt f4.txt
+rm: cannot remove 'f3.txt': No such file or directory
+student@T39:~/clg/user$ cat f3.txt
+cat: f3.txt: No such file or directory
+student@T39:~/clg/user$ touch f3.txt
+student@T39:~/clg/user$ cat > f3.txt
+gai
+juk
+^C
+student@T39:~/clg/user$ cat f3.txt
+gai
+juk
+student@T39:~/clg/user$ rm f3.txt f4.txt
+rm: cannot remove 'f4.txt': No such file or directory
+student@T39:~/clg/user$ touch f4.txt
+student@T39:~/clg/user$ cat >f4.txt
+gy
+jui
+^C
+student@T39:~/clg/user$ rm f3.txt f4.txt
+rm: cannot remove 'f3.txt': No such file or directory
+student@T39:~/clg/user$ cat f3.txt
+cat: f3.txt: No such file or directory
+student@T39:~/clg/user$ ls
+a  p.txt
+student@T39:~/clg/user$ rm -R a
+student@T39:~/clg/user$ ls
+p.txt
+student@T39:~/clg/user$ touch f5.txt
+student@T39:~/clg/user$ cat > f5.txt
+ghui
+sjh
+^C
+student@T39:~/clg/user$ ls
+f5.txt  p.txt
+student@T39:~/clg/user$ rm f5.txt p.txt
+student@T39:~/clg/user$ ls
+student@T39:~/clg/user$ cg ~
+
+Command 'cg' not found, but can be installed with:
+
+apt install cgvg
+Please ask your administrator.
+
+student@T39:~/clg/user$ cd ~
+student@T39:~$ man rm
+student@T39:~$ 
+

@@ -1,0 +1,199 @@
+student@T39:~$  gedit twonum.sh
+student@T39:~$ chmod +x twonum.sh
+student@T39:~$ ./twonum.sh
+enter the first number
+7
+enter the second number
+5
+grater
+student@T39:~$ ./twonum.sh
+enter the first number
+7
+enter the second number
+8
+./twonum.sh: line 11: syntax error near unexpected token `elif'
+./twonum.sh: line 11: `elif [ $a -gt $b ]'
+student@T39:~$ ./twonum.sh
+enter the first number
+7
+enter the second number
+4
+7 is greater than 4
+student@T39:~$ 
+student@T39:~$ ./twonum.sh
+enter the first number
+5
+enter the second number
+5
+5 is equal to 5
+student@T39:~$ ./twonum.sh
+enter the first number
+4
+enter the second number
+8
+4 is lessthan 8
+student@T39:~$ gedit odd.sh
+student@T39:~$ chmod +x odd.sh
+
+student@T39:~$ ./odd.sh
+enter a number
+5
+5 is odd number
+student@T39:~$ ./odd.sh
+enter a number
+2
+2 is even
+student@T39:~$ ./odd.sh
+enter a number
+5
+5 is odd number
+student@T39:~$ ./odd.sh
+enter a number
+2
+2 is even number
+student@T39:~$ ./odd.sh
+enter a number
+0
+0 is zero
+student@T39:~$ gedit leap.sh
+student@T39:~$ chmod +x leap.sh
+student@T39:~$ ./leap.sh
+enter a year
+2004
+./leap.sh: line 9: syntax error: unexpected end of file
+student@T39:~$ ./leap.sh
+enter a year
+2004
+leap
+student@T39:~$ ./leap.sh
+enter a year
+2019
+not leap
+student@T39:~$ gedit alpha.sh
+student@T39:~$ chmod +x alpha.sh
+student@T39:~$ ./alpha.sh
+Enter something: 
+a
+./alpha.sh: line 4: [[: [AEIOUaeiou]*: syntax error: operand expected (error token is "[AEIOUaeiou]*")
+consonant
+student@T39:~$ ./alpha.sh
+Enter something: 
+a
+./alpha.sh: line 3: syntax error near unexpected token `('
+./alpha.sh: line 3: `s=(($num -eq [AEIOUaeiou]))'
+./alpha.sh: line 4: [: too many arguments
+consonant
+student@T39:~$ ./alpha.sh
+Enter something: 
+a
+vowel
+student@T39:~$ ./alpha.sh
+Enter something: 
+r
+consonant
+student@T39:~$ ./alpha.sh
+Enter something: 
+6
+consonant
+student@T39:~$ chmod +x alpha.sh
+student@T39:~$ ./alpha.sh
+Enter something: 
+4
+consonant
+student@T39:~$ ./alpha.sh
+Enter something: 
+a
+./alpha.sh: line 3: [: too many arguments
+vowel
+student@T39:~$ ./alpha.sh
+Enter something: 
+r
+./alpha.sh: line 3: [: too many arguments
+consonant
+student@T39:~$ ./alpha.sh
+Enter something: 
+s
+./alpha.sh: line 3: conditional binary operator expected
+./alpha.sh: line 3: syntax error near `!=='
+./alpha.sh: line 3: `if [[ $num !== *[a-Z]* ]]'
+student@T39:~$ ./alpha.sh
+Enter something: 
+1
+not a alphabet
+student@T39:~$ ./alpha.sh
+Enter something: 
+a
+vowel
+student@T39:~$ ./alpha.sh
+Enter something: 
+f
+consonant
+student@T39:~$ ./alpha.sh
+Enter something: 
+y
+consonant
+student@T39:~$ gedit rev.sh
+student@T39:~$ chmod +x rev.sh
+student@T39:~$ ./rev.sh
+enter a limit
+10
+./rev.sh: line 3: syntax error near unexpected token `i=$n'
+./rev.sh: line 3: `for [ i=$n; i<$n; i++]'
+student@T39:~$ ./rev.sh
+enter a limit
+10
+10
+10
+10
+10
+10
+10
+10
+10
+10
+10
+student@T39:~$ ./rev.sh
+enter a limit
+10
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+student@T39:~$ gedit mul.sh
+student@T39:~$ chmod +x mul.sh
+student@T39:~$ ./mul.sh
+enter a number
+5
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+student@T39:~$ ./mul.sh
+enter a number
+7
+7 * 1 = 7
+7 * 2 = 14
+7 * 3 = 21
+7 * 4 = 28
+7 * 5 = 35
+7 * 6 = 42
+7 * 7 = 49
+7 * 8 = 56
+7 * 9 = 63
+7 * 10 = 70
+student@T39:~$ gedit mul.sh
+student@T39:~$ ^C
+student@T39:~$ 
+

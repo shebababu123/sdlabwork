@@ -1,0 +1,158 @@
+student@T39:~$ mkdir stud
+student@T39:~$ cd stud
+student@T39:~/stud$ mkdir sheba
+student@T39:~/stud$ cd sheba
+student@T39:~/stud/sheba$ touch f1.txt
+student@T39:~/stud/sheba$ cat > f1.txt
+Flower, the reproductive portion of any plant in the division Magnoliophyta (Angiospermae), a group commonly called flowering plants or angiosperms. As popularly used, the term “flower” especially applies when part or all of the reproductive structure is distinctive in colour and form.
+^C
+student@T39:~/stud/sheba$ touch f2.txt
+student@T39:~/stud/sheba$ cat > f2.txt
+In their range of colour, size, form, and anatomical arrangement, flowers present a seemingly endless variety of combinations. They range in size from minute blossoms to giant blooms. In some plants, such as poppy, magnolia, tulip, and petunia, each flower is relatively large and showy and is produced singly, while in other plants, such as aster, snapdragon, calla lily, and lilac, the individual flowers may be very small and are borne in a distinctive cluster known as an inflorescence. Regardless of their variety, all flowers have a uniform function, the reproduction of the species through the production of seed. The flower is the characteristic structure of the evolutionarily highest group of plants, the angiosperms. (See also angiosperm.)
+^C
+student@T39:~/stud/sheba$ cat >f3.txt
+haiiiiiiiiiiiiiiii
+flower
+FloWER
+LarGe
+^C
+student@T39:~/stud/sheba$ cat >f4.txt
+FLOwer
+ColoR
+color
+^C
+student@T39:~/stud/sheba$ grep "flower" f1.txt
+Flower, the reproductive portion of any plant in the division Magnoliophyta (Angiospermae), a group commonly called flowering plants or angiosperms. As popularly used, the term “flower” especially applies when part or all of the reproductive structure is distinctive in colour and form.
+student@T39:~/stud/sheba$ grep "flower" f1.txt f2.txt
+f1.txt:Flower, the reproductive portion of any plant in the division Magnoliophyta (Angiospermae), a group commonly called flowering plants or angiosperms. As popularly used, the term “flower” especially applies when part or all of the reproductive structure is distinctive in colour and form.
+f2.txt:In their range of colour, size, form, and anatomical arrangement, flowers present a seemingly endless variety of combinations. They range in size from minute blossoms to giant blooms. In some plants, such as poppy, magnolia, tulip, and petunia, each flower is relatively large and showy and is produced singly, while in other plants, such as aster, snapdragon, calla lily, and lilac, the individual flowers may be very small and are borne in a distinctive cluster known as an inflorescence. Regardless of their variety, all flowers have a uniform function, the reproduction of the species through the production of seed. The flower is the characteristic structure of the evolutionarily highest group of plants, the angiosperms. (See also angiosperm.)
+student@T39:~/stud/sheba$ grep -i "Flower" f3.txt
+flower
+FloWER
+student@T39:~/stud/sheba$ grep -w 'flower|color' f1.txt f2.txt
+student@T39:~/stud/sheba$ grep -w 'flower|color' f1.txt f4.txt
+student@T39:~/stud/sheba$ egrep -w 'flower|color' f1.txt f4.txt
+f1.txt:Flower, the reproductive portion of any plant in the division Magnoliophyta (Angiospermae), a group commonly called flowering plants or angiosperms. As popularly used, the term “flower” especially applies when part or all of the reproductive structure is distinctive in colour and form.
+f4.txt:color
+student@T39:~/stud/sheba$ grep 'floWER' f3.txt
+student@T39:~/stud/sheba$ grep 'floWER*' f3.txt
+student@T39:~/stud/sheba$ grep '*' f3.txt
+FloWER * *
+student@T39:~/stud/sheba$ egrep '*|#' f3.txt f4.txt
+f3.txt:haiiiiiiiiiiiiiiii
+f3.txt:flower
+f3.txt:FloWER * *
+f3.txt:LarGe#
+f4.txt:FLOwer
+f4.txt:ColoR#
+f4.txt:color
+student@T39:~/stud/sheba$ egrep '*|#' f3.txt 
+haiiiiiiiiiiiiiiii
+flower
+FloWER * *
+LarGe#
+student@T39:~/stud/sheba$ grep -B2 "color" f4.txt
+FLOwer
+ColoR#
+color
+student@T39:~/stud/sheba$ grep -B2 "flower" f3.txt
+haiiiiiiiiiiiiiiii
+flower
+student@T39:~/stud/sheba$ grep -A2 "flower" f3.txt
+flower
+FloWER * *
+LarGe#
+student@T39:~/stud/sheba$ grep -v "flower" f1.txt
+student@T39:~/stud/sheba$ grep -v"in" f1.txt
+^C
+student@T39:~/stud/sheba$ grep -v "in" f1.txt
+student@T39:~/stud/sheba$ grep -v "flower" f3.txt
+haiiiiiiiiiiiiiiii
+FloWER * *
+LarGe#
+student@T39:~/stud/sheba$ grep -c "flower" f1.txt
+1
+student@T39:~/stud/sheba$ grep -c "flower" f3.txt
+1
+student@T39:~/stud/sheba$ grep -c "flower" f2.txt
+1
+student@T39:~/stud/sheba$ grep -c "flower" f4.txt
+0
+student@T39:~/stud/sheba$ cat f5.txt
+cat: f5.txt: No such file or directory
+student@T39:~/stud/sheba$ cat > f5.txt
+hai
+hai
+ghhkkg
+hai
+kjhf
+hai
+^C
+student@T39:~/stud/sheba$ grep -n "hai" f5.txt
+1:hai
+2:hai
+4:hai
+6:hai
+student@T39:~/stud/sheba$ grep "^hai" f5.txt
+hai nthund
+hai  gaiigghdf
+hai
+hai
+student@T39:~/stud/sheba$ grep "g$" f5.txt
+ghhkkg
+student@T39:~/stud/sheba$ grep -l "flower" *
+f1.txt
+f2.txt
+f3.txt
+student@T39:~/stud/sheba$ grep "l$" f2.txt
+student@T39:~/stud/sheba$ grep "l$" f2.txt
+ In some plants, such as poppy, magnolia, tulip, and petunia, each flower is relatively large and showy and is produced singly, while in other** plants, such as aster, snapdragon, calla lil
+student@T39:~/stud/sheba$ cat > file1.txt
+hai
+hai
+hloo
+hai
+hlooo
+^C
+student@T39:~/stud/sheba$ cat > file2.txt
+sheba
+aparna
+praveena
+hai
+hloo
+hlo
+^C
+student@T39:~/stud/sheba$ cat > file3.txt
+SHeba
+hai 
+hlo 
+howl
+^C
+student@T39:~/stud/sheba$ grep "hai" file1.txt
+hai
+hai
+hai
+student@T39:~/stud/sheba$ grep "hai" file1.txt fil2.txt
+file1.txt:hai
+file1.txt:hai
+file1.txt:hai
+grep: fil2.txt: No such file or directory
+student@T39:~/stud/sheba$ grep "hai" file1.txt file2.txt
+file1.txt:hai
+file1.txt:hai
+file1.txt:hai
+file2.txt:hai
+student@T39:~/stud/sheba$ grep -i "Sheba" file3.txt
+SHeba
+student@T39:~/stud/sheba$ egrep -w 'hai|hlo' file1.txt file3.txt
+file1.txt:hai
+file1.txt:hai
+file1.txt:hai
+file3.txt:hai
+file3.txt:hlo
+student@T39:~/stud/sheba$ grep -v "hloo" file1.txt
+hai
+hai
+hai
+student@T39:~/stud/sheba$ 
+

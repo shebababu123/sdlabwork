@@ -1,0 +1,81 @@
+student@S28:~$ mkdir ajce
+student@S28:~$ cd ajce
+student@S28:~/ajce$ mkdir mca
+student@S28:~/ajce$ cd mca
+student@S28:~/ajce/mca$ mkdir rmca
+student@S28:~/ajce/mca$ mkdir lmca
+student@S28:~/ajce/mca$ mkdir intmca
+student@S28:~/ajce/mca$ cd rmca
+student@S28:~/ajce/mca/rmca$ touch f1.txt
+student@S28:~/ajce/mca/rmca$ cat > f1.txt
+a
+b
+c
+d
+^C
+student@S28:~/ajce/mca/rmca$ cat f1.txt
+a
+b
+c
+d
+student@S28:~/ajce/mca/rmca$ touch f2.txt
+student@S28:~/ajce/mca/rmca$ cat >f2.txt
+p
+q
+r
+s
+^C
+student@S28:~/ajce/mca/rmca$ cat f2.txt
+p
+q
+r
+s
+student@S28:~/ajce/mca/rmca$ mv -b f1.txt f2.txt
+student@S28:~/ajce/mca/rmca$ ls
+f2.txt  f2.txt~
+student@S28:~/ajce/mca/rmca$ touch f3.txt
+student@S28:~/ajce/mca/rmca$ cat >f3.txt
+hello
+wlcm
+^C
+student@S28:~/ajce/mca/rmca$ mv -u f2.txt f3.txt
+student@S28:~/ajce/mca/rmca$ ls
+f2.txt  f2.txt~  f3.txt
+student@S28:~/ajce/mca/rmca$ cat f3.txt
+hello
+wlcm
+student@S28:~/ajce/mca/rmca$ mv -i f2.txt f3.txt
+mv: overwrite 'f3.txt'? n
+student@S28:~/ajce/mca/rmca$ ls
+f2.txt  f2.txt~  f3.txt
+student@S28:~/ajce/mca/rmca$ mv f3.txt abc
+student@S28:~/ajce/mca/rmca$ ls
+abc  f2.txt  f2.txt~
+student@S28:~/ajce/mca/rmca$ touch f4.txt
+student@S28:~/ajce/mca/rmca$ cat >f4.txt
+ghy
+a
+	ght
+sd
+dd
+	gh
+as
+^C
+student@S28:~/ajce/mca/rmca$ cat -T f4.txt
+ghy
+a
+^Ight
+sd
+dd
+^Igh
+as
+student@S28:~/ajce/mca/rmca$ man mv
+student@S28:~/ajce/mca/rmca$ man mv
+student@S28:~/ajce/mca/rmca$ mv -T f2.txt f4.txt
+student@S28:~/ajce/mca/rmca$ ls
+abc  f2.txt~  f4.txt
+student@S28:~/ajce/mca/rmca$ man mv
+student@S28:~/ajce/mca/rmca$ man cat
+student@S28:~/ajce/mca/rmca$ ^C
+student@S28:~/ajce/mca/rmca$ 
+

@@ -1,0 +1,370 @@
+student@T39:~$ touch f1
+student@T39:~$ cat>f1
+hai
+how are you^Z
+[1]+  Stopped                 cat > f1
+student@T39:~$ cat f1
+hai
+student@T39:~$ cat >f1
+how are you
+fne
+^Z
+[2]+  Stopped                 cat > f1
+student@T39:~$ cat f1
+how are you
+fne
+student@T39:~$ cd ajce
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ cd rmca
+student@T39:~/ajce/mca/rmca$ touch f1
+student@T39:~/ajce/mca/rmca$ touch f2
+student@T39:~/ajce/mca/rmca$ touch f3
+student@T39:~/ajce/mca/rmca$ cat >f1
+hai
+how are you
+^Z
+[3]+  Stopped                 cat > f1
+student@T39:~/ajce/mca/rmca$ cat >f2
+welcome
+^Z
+[4]+  Stopped                 cat > f2
+student@T39:~/ajce/mca/rmca$ cat >f3
+all the bezt
+^Z
+[5]+  Stopped                 cat > f3
+student@T39:~/ajce/mca/rmca$ cat rmca
+cat: rmca: No such file or directory
+student@T39:~/ajce/mca/rmca$ touch file1.txt
+student@T39:~/ajce/mca/rmca$ cat >file1.txt
+hello world^C
+student@T39:~/ajce/mca/rmca$ cat file.txt
+cat: file.txt: No such file or directory
+student@T39:~/ajce/mca/rmca$ cat file
+cat: file: No such file or directory
+student@T39:~/ajce/mca/rmca$ cat file1.txt
+student@T39:~/ajce/mca/rmca$ cat >file1.txt
+hello
+^C
+student@T39:~/ajce/mca/rmca$ cat file1.txt
+hello
+student@T39:~/ajce/mca/rmca$ touch file2.txt
+student@T39:~/ajce/mca/rmca$ cat >file2.txt
+hai
+^C
+student@T39:~/ajce/mca/rmca$ cat file1.txt file2.txt
+hello
+hai
+student@T39:~/ajce/mca/rmca$ cat file1.txt>file2.txt
+student@T39:~/ajce/mca/rmca$ cat file1.txt
+hello
+student@T39:~/ajce/mca/rmca$ cat file2.txt
+hello
+student@T39:~/ajce/mca/rmca$ man cat
+student@T39:~/ajce/mca/rmca$ cat file1.txt>f5.txt
+student@T39:~/ajce/mca/rmca$ cat f5.txt
+hello
+student@T39:~/ajce/mca/rmca$ cat -n file1.txt
+     1	hello
+student@T39:~/ajce/mca/rmca$ cat f5
+cat: f5: No such file or directory
+student@T39:~/ajce/mca/rmca$ cat f5.txt
+hello
+student@T39:~/ajce/mca/rmca$ cat file1.txt file2.txt f5.txt
+hello
+hello
+hello
+student@T39:~/ajce/mca/rmca$ touch f4.txt
+student@T39:~/ajce/mca/rmca$ cat >f4.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+^C
+student@T39:~/ajce/mca/rmca$ cat f4.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+student@T39:~/ajce/mca/rmca$ cat -s f4.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+student@T39:~/ajce/mca/rmca$ cat file1.txt>>f4.txt
+student@T39:~/ajce/mca/rmca$ cat f4.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+hello
+student@T39:~/ajce/mca/rmca$ cat f4.txt;f5.txt;file1.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+hello
+f5.txt: command not found
+file1.txt: command not found
+student@T39:~/ajce/mca/rmca$ cat f4.txt; f5.txt; file1.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+hello
+f5.txt: command not found
+file1.txt: command not found
+student@T39:~/ajce/mca/rmca$ cat f4.txt;cat f5.txt;cat file1.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+hello
+hello
+hello
+student@T39:~/ajce/mca/rmca$ cat -E f4.txt
+welcome to our world$
+are you happy?$
+whatsapp?$
+tea or coffe$
+hello$
+student@T39:~/ajce/mca/rmca$ touch f7.txt
+student@T39:~/ajce/mca/rmca$ cat >f7.txt
+1
+2
+
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+^C
+student@T39:~/ajce/mca/rmca$ cat f7.txt
+1
+2
+
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+student@T39:~/ajce/mca/rmca$ cat -n f7.txt
+     1	1
+     2	2
+     3	
+     4	
+     5	3
+     6	
+     7	4
+     8	
+     9	5
+    10	
+    11	6
+    12	
+    13	7
+    14	
+    15	8
+    16	
+    17	9
+    18	
+student@T39:~/ajce/mca/rmca$ cat f7.txt
+1
+2
+
+
+3
+4
+5
+
+
+
+
+
+6
+7
+
+
+
+
+8
+
+9
+student@T39:~/ajce/mca/rmca$ cat -n f7.txt
+     1	1
+     2	2
+     3	
+     4	
+     5	3
+     6	4
+     7	5
+     8	
+     9	
+    10	
+    11	
+    12	
+    13	6
+    14	7
+    15	
+    16	
+    17	
+    18	
+    19	8
+    20	
+    21	9
+student@T39:~/ajce/mca/rmca$ cat -s f7.txt
+1
+2
+
+3
+4
+5
+
+6
+7
+
+8
+
+9
+student@T39:~/ajce/mca/rmca$ cat *.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+hello
+hello
+1
+2
+
+
+3
+4
+5
+
+
+
+
+
+6
+7
+
+
+
+
+8
+
+9
+hello
+hello
+student@T39:~/ajce/mca/rmca$ cat -T f4.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+hello
+student@T39:~/ajce/mca/rmca$ cat -A f4.txt
+welcome to our world$
+are you happy?$
+whatsapp?$
+tea or coffe$
+hello$
+student@T39:~/ajce/mca/rmca$ cat -b f7.txt
+     1	1
+     2	2
+
+
+     3	3
+     4	4
+     5	5
+
+
+
+
+
+     6	6
+     7	7
+
+
+
+
+     8	8
+
+     9	9
+student@T39:~/ajce/mca/rmca$ cat -t f4.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+hello
+student@T39:~/ajce/mca/rmca$ cat -v f4.txt
+welcome to our world
+are you happy?
+whatsapp?
+tea or coffe
+hello
+student@T39:~/ajce/mca/rmca$ mv file1.txt f4.txt
+student@T39:~/ajce/mca/rmca$ ls
+f1  f2  f3  f4.txt  f5.txt  f7.txt  file2.txt
+student@T39:~/ajce/mca/rmca$ cat f4
+cat: f4: No such file or directory
+student@T39:~/ajce/mca/rmca$ cat f4.txt
+hello
+student@T39:~/ajce/mca/rmca$ mv f4.txt /
+mv: cannot move 'f4.txt' to '/f4.txt': Permission denied
+student@T39:~/ajce/mca/rmca$ ls -d * /
+/  f1  f2  f3  f4.txt  f5.txt  f7.txt  file2.txt
+student@T39:~/ajce/mca/rmca$ mv -i f4.txt file2.txt
+mv: overwrite 'file2.txt'? n
+student@T39:~/ajce/mca/rmca$ ls
+f1  f2  f3  f4.txt  f5.txt  f7.txt  file2.txt
+student@T39:~/ajce/mca/rmca$ cat file2.txt
+hello
+student@T39:~/ajce/mca/rmca$ cat f7.txt
+1
+2
+
+
+3
+4
+5
+
+
+
+
+
+6
+7
+
+
+
+
+8
+
+9
+student@T39:~/ajce/mca/rmca$ mv f7.txt abc
+student@T39:~/ajce/mca/rmca$ mv abc xyz
+student@T39:~/ajce/mca/rmca$ ls
+f1  f2  f3  f4.txt  f5.txt  file2.txt  xyz
+student@T39:~/ajce/mca/rmca$ mv *.txt xyz
+student@T39:~/ajce/mca/rmca$ ls
+f1  f2  f3  xyz
+student@T39:~/ajce/mca/rmca$ 
+

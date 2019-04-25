@@ -1,0 +1,23 @@
+server
+
+student@T70:~$ gedit udpBaseServer_2.java
+^C
+student@T70:~$ javac udpBaseServer_2.java
+student@T70:~$ java udpBaseServer_2
+hai
+Client:-jii
+how 
+Client:-when
+
+
+client
+
+student@T70:~$ gedit udpBaseClient_2.java
+student@T70:~$ javac udpBaseClient_2.java
+student@T70:~$ java udpBaseClient_2
+jii
+when
+
+
+
+

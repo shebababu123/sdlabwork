@@ -1,0 +1,87 @@
+student@T39:~$ echo sheba
+sheba
+student@T39:~$ read a
+5
+student@T39:~$ echo $a
+5
+student@T39:~$ echo a
+a
+student@T39:~$ man echo
+student@T39:~$ man echo
+student@T39:~$ echo -e hai\space\hello
+haispacehello
+student@T39:~$ echo \nhai\nhow are you\nfine
+nhainhow are younfine
+student@T39:~$ echo -e hlo\nhai\nhow are you\nfine
+hlonhainhow are younfine
+student@T39:~$ echo -e 'hlo \nhai \nhow \nfine'
+hlo 
+hai 
+how 
+fine
+student@T39:~$ echo -e 'hai \bhow \bare \byou'
+haihowareyou
+student@T39:~$ echo -e 'hai \thow \tare \tyou'
+hai 	how 	are 	you
+student@T39:~$ echo -e 'hai \vhow \vare \vyou'
+hai 
+    how 
+        are 
+            you
+student@T39:~$ echo 'hai \r how are you'
+hai \r how are you
+student@T39:~$ echo -e 'hai \r how are you'
+ how are you
+student@T39:~$ echo -e 'hai how are you', \c 'fine'
+hai how are you, c fine
+student@T39:~$ echo -e 'hai how are you', '\c fine'
+hai how are you, student@T39:~$ 
+student@T39:~$ echo -e 'hai how are you', '\c fine'
+hai how are you, student@T39:~$ 
+student@T39:~$ echo -e "hai how are you","are you fine,\c yes"
+hai how are you,are you fine,student@T39:~$ 
+student@T39:~$ man read
+student@T39:~$ read name
+sheba
+student@T39:~$ echo 'my name is' $name
+my name is sheba
+student@T39:~$ read a,b
+bash: read: `a,b': not a valid identifier
+student@T39:~$ read a b
+2
+student@T39:~$ read a
+3
+student@T39:~$ read b
+5
+student@T39:~$ echo $a $b
+3 5
+student@T39:~$ ^C
+student@T39:~$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

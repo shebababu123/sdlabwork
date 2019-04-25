@@ -1,0 +1,142 @@
+student@T39:~$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T39:~$ mkdir ajce
+student@T39:~$ cd ajce
+student@T39:~/ajce$ mkdir mca
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ mkdir rmca
+student@T39:~/ajce/mca$ mkdir lmca
+student@T39:~/ajce/mca$ mkdir intmca
+student@T39:~/ajce/mca$ cd rmca
+student@T39:~/ajce/mca/rmca$ touch f1.txt
+student@T39:~/ajce/mca/rmca$ cat >f1.txt
+hai 
+how are you...?
+^C
+student@T39:~/ajce/mca/rmca$ cat f1.txt
+hai 
+how are you...?
+student@T39:~/ajce/mca/rmca$ touch f2.txt
+student@T39:~/ajce/mca/rmca$ cat > f2.txt
+welcome            
+to
+our
+world!!!!
+^C
+student@T39:~/ajce/mca/rmca$ cat f2.txt
+welcome 
+to
+our
+world!!!!
+student@T39:~/ajce/mca/rmca$ touch f3.txt
+student@T39:~/ajce/mca/rmca$ cat > f3.txt
+a
+b
+c
+d
+e
+^C
+student@T39:~/ajce/mca/rmca$ ls
+f1.txt  f2.txt  f3.txt
+student@T39:~/ajce/mca/rmca$ cp f1.txt f2.txt
+student@T39:~/ajce/mca/rmca$ ls
+f1.txt  f2.txt  f3.txt
+student@T39:~/ajce/mca/rmca$ cat f2.txt
+hai 
+how are you...?
+student@T39:~/ajce/mca/rmca$ cat f1.txt
+hai 
+how are you...?
+student@T39:~/ajce/mca/rmca$ mkdir abc
+student@T39:~/ajce/mca/rmca$ cp f1.txt f2.txt f3.txt abc
+student@T39:~/ajce/mca/rmca$ ls
+abc  f1.txt  f2.txt  f3.txt
+student@T39:~/ajce/mca/rmca$ cp -R abc
+cp: missing destination file operand after 'abc'
+Try 'cp --help' for more information.
+student@T39:~/ajce/mca/rmca$ touch xyz
+student@T39:~/ajce/mca/rmca$ mkdir xyz
+mkdir: cannot create directory ‘xyz’: File exists
+student@T39:~/ajce/mca/rmca$ mkdir pqr
+student@T39:~/ajce/mca/rmca$ cp -R abc pqr
+student@T39:~/ajce/mca/rmca$ ls
+abc  f1.txt  f2.txt  f3.txt  pqr  xyz
+student@T39:~/ajce/mca/rmca$ man cp
+student@T39:~/ajce/mca/rmca$ cp -b f1.txt f3.txt
+student@T39:~/ajce/mca/rmca$ ls
+abc  f1.txt  f2.txt  f3.txt  f3.txt~  pqr  xyz
+student@T39:~/ajce/mca/rmca$ touch p.txt
+student@T39:~/ajce/mca/rmca$ cat > p.txt
+p 
+q
+r
+s
+^C
+student@T39:~/ajce/mca/rmca$ cp -f f3.txt p.txt
+student@T39:~/ajce/mca/rmca$ ls
+abc  f1.txt  f2.txt  f3.txt  f3.txt~  pqr  p.txt  xyz
+student@T39:~/ajce/mca/rmca$ cat  p.txt
+hai 
+how are you...?
+student@T39:~/ajce/mca/rmca$ cat  f3.txt
+hai 
+how are you...?
+student@T39:~/ajce/mca/rmca$ cp -l f3.txt p.txt
+cp: cannot create hard link 'p.txt' to 'f3.txt': File exists
+student@T39:~/ajce/mca/rmca$ touch f4.txt
+student@T39:~/ajce/mca/rmca$ cat > f4.txt
+never
+do
+thiz
+^C
+student@T39:~/ajce/mca/rmca$ cp -l f4.txt f5.txt
+student@T39:~/ajce/mca/rmca$ ls
+abc  f1.txt  f2.txt  f3.txt  f3.txt~  f4.txt  f5.txt  pqr  p.txt  xyz
+student@T39:~/ajce/mca/rmca$ cp -v f4.txt f5.txt
+cp: 'f4.txt' and 'f5.txt' are the same file
+student@T39:~/ajce/mca/rmca$ cp -v f3.txt f5.txt
+'f3.txt' -> 'f5.txt'
+student@T39:~/ajce/mca/rmca$ cp -b f4.txt
+cp: missing destination file operand after 'f4.txt'
+Try 'cp --help' for more information.
+student@T39:~/ajce/mca/rmca$ cp -b f5.txt
+cp: missing destination file operand after 'f5.txt'
+Try 'cp --help' for more information.
+student@T39:~/ajce/mca/rmca$ cp -l f2.txt
+cp: missing destination file operand after 'f2.txt'
+Try 'cp --help' for more information.
+student@T39:~/ajce/mca/rmca$ cp -l pqr
+cp: missing destination file operand after 'pqr'
+Try 'cp --help' for more information.
+student@T39:~/ajce/mca/rmca$ ls
+abc  f1.txt  f2.txt  f3.txt  f3.txt~  f4.txt  f5.txt  pqr  p.txt  xyz
+student@T39:~/ajce/mca/rmca$ mkdir d
+student@T39:~/ajce/mca/rmca$ ls
+abc  d  f1.txt  f2.txt  f3.txt  f3.txt~  f4.txt  f5.txt  pqr  p.txt  xyz
+student@T39:~/ajce/mca/rmca$ cp abc d pqr
+cp: -r not specified; omitting directory 'abc'
+cp: -r not specified; omitting directory 'd'
+student@T39:~/ajce/mca/rmca$ cp -R abc d pqr
+student@T39:~/ajce/mca/rmca$ ls
+abc  d  f1.txt  f2.txt  f3.txt  f3.txt~  f4.txt  f5.txt  pqr  p.txt  xyz
+student@T39:~/ajce/mca/rmca$ ls pqr
+abc  d
+student@T39:~/ajce/mca/rmca$ cp -i f1.txt f5.txt
+cp: overwrite 'f5.txt'? n
+student@T39:~/ajce/mca/rmca$ ls
+abc  d  f1.txt  f2.txt  f3.txt  f3.txt~  f4.txt  f5.txt  pqr  p.txt  xyz
+student@T39:~/ajce/mca/rmca$ cat f5.txt
+hai 
+how are you...?
+student@T39:~/ajce/mca/rmca$ mkdir a
+student@T39:~/ajce/mca/rmca$ cp -r d a
+student@T39:~/ajce/mca/rmca$ ls
+a  abc  d  f1.txt  f2.txt  f3.txt  f3.txt~  f4.txt  f5.txt  pqr  p.txt  xyz
+student@T39:~/ajce/mca/rmca$ cat a
+cat: a: Is a directory
+student@T39:~/ajce/mca/rmca$ cp -r f5.txt i.txt
+student@T39:~/ajce/mca/rmca$ cat i.txt
+hai 
+how are you...?
+student@T39:~/ajce/mca/rmca$ 
+

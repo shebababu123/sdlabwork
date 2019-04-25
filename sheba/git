@@ -1,0 +1,173 @@
+student@T39:~$ cd shebagit
+student@T39:~/shebagit$ git init
+Initialized empty Git repository in /home/student/shebagit/.git/
+student@T39:~/shebagit$ git clone https://github.com/shebababu123/Repo
+fatal: destination path 'Repo' already exists and is not an empty directory.
+student@T39:~/shebagit$ git clone https://github.com/shebababu123/Repo
+fatal: destination path 'Repo' already exists and is not an empty directory.
+student@T39:~/shebagit$ git init
+Reinitialized existing Git repository in /home/student/shebagit/.git/
+student@T39:~/shebagit$ git clone https://github.com/shebababu123/repo3
+Cloning into 'repo3'...
+warning: You appear to have cloned an empty repository.
+student@T39:~/shebagit$ cd repo3
+student@T39:~/shebagit/repo3$ git config --global user.name "shebababu123"
+student@T39:~/shebagit/repo3$ git config --global user.email "shebababu506@gmail.com"
+student@T39:~/shebagit/repo3$ gedit file1.txt
+student@T39:~/shebagit/repo3$ gedit f1.c
+^C
+student@T39:~/shebagit/repo3$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	f1.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T39:~/shebagit/repo3$ git add f1.c
+student@T39:~/shebagit/repo3$ git commit -m "frst commit"
+[master (root-commit) 3acec67] frst commit
+ 1 file changed, 6 insertions(+)
+ create mode 100644 f1.c
+student@T39:~/shebagit/repo3$ git push origin master
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 268 bytes | 268.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shebababu123/repo3
+ * [new branch]      master -> master
+student@T39:~/shebagit/repo3$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+student@T39:~/shebagit/repo3$ git revert "hai" f1.c
+fatal: bad revision 'hai'
+student@T39:~/shebagit/repo3$ revert "hai" f1.c
+revert: command not found
+student@T39:~/shebagit/repo3$ git rm f1.c
+rm 'f1.c'
+student@T39:~/shebagit/repo3$ git branch feature
+student@T39:~/shebagit/repo3$ git branch
+  feature
+* master
+student@T39:~/shebagit/repo3$ git checkout feature
+D	f1.c
+Switched to branch 'feature'
+student@T39:~/shebagit/repo3$ git branch
+* feature
+  master
+student@T39:~/shebagit/repo3$ git push origin feature
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/shebababu123/repo3/pull/new/feature
+remote: 
+To https://github.com/shebababu123/repo3
+ * [new branch]      feature -> feature
+student@T39:~/shebagit/repo3$ gedit f2.c
+student@T39:~/shebagit/repo3$ git pull <remote>
+bash: syntax error near unexpected token `newline'
+student@T39:~/shebagit/repo3$ git pull master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T39:~/shebagit/repo3$ git status
+On branch feature
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    f1.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	f2.c
+
+student@T39:~/shebagit/repo3$ git pull f1.c
+fatal: 'f1.c' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T39:~/shebagit/repo3$ git pull repo3
+fatal: 'repo3' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T39:~/shebagit/repo3$ git pull repo3 master
+fatal: 'repo3' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T39:~/shebagit/repo3$ git add f2.c
+student@T39:~/shebagit/repo3$ git commit -m "second"
+[feature 19fc5e3] second
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename f1.c => f2.c (100%)
+student@T39:~/shebagit/repo3$ git push origin master
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+To https://github.com/shebababu123/repo3
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/shebababu123/repo3'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student@T39:~/shebagit/repo3$ git branch
+* feature
+  master
+student@T39:~/shebagit/repo3$ git push origin feature
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+Counting objects: 2, done.
+Writing objects: 100% (2/2), 222 bytes | 222.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/shebababu123/repo3
+   3acec67..19fc5e3  feature -> feature
+student@T39:~/shebagit/repo3$ commit
+commit: command not found
+student@T39:~/shebagit/repo3$ git commit -m "hai"
+On branch feature
+Changes not staged for commit:
+	modified:   f2.c
+
+no changes added to commit
+student@T39:~/shebagit/repo3$ git push origin feature
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+To https://github.com/shebababu123/repo3
+ ! [rejected]        feature -> feature (fetch first)
+error: failed to push some refs to 'https://github.com/shebababu123/repo3'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student@T39:~/shebagit/repo3$ git fetch origin feature
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/shebababu123/repo3
+ * branch            feature    -> FETCH_HEAD
+   19fc5e3..9b472f1  feature    -> origin/feature
+student@T39:~/shebagit/repo3$ git merge origin feature
+merge: origin - not something we can merge
+student@T39:~/shebagit/repo3$ 
+

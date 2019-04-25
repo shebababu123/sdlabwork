@@ -1,0 +1,119 @@
+student@T39:~$ cd clg
+student@T39:~/clg$ cd user
+student@T39:~/clg/user$ expr 12 + 20
+32
+student@T39:~/clg/user$ expr 70 \* 10
+700
+student@T39:~/clg/user$ expr 20 - 8
+12
+student@T39:~/clg/user$ expr 20 / 10
+2
+student@T39:~/clg/user$ read x
+25
+student@T39:~/clg/user$ read y
+56
+student@T39:~/clg/user$ `expr x + y`
+expr: non-integer argument
+student@T39:~/clg/user$ y=23
+student@T39:~/clg/user$ y=`expr $y + 1`
+student@T39:~/clg/user$ echo $y
+24
+student@T39:~/clg/user$ read a
+45
+student@T39:~/clg/user$ read b
+10
+student@T39:~/clg/user$ c= `expr $a + $b`
+55: command not found
+student@T39:~/clg/user$ `expr $a + $b`
+55: command not found
+student@T39:~/clg/user$ read a
+23
+student@T39:~/clg/user$ read b
+10
+student@T39:~/clg/user$ c=`expr $a + $b`
+student@T39:~/clg/user$ echo $c
+33
+student@T39:~/clg/user$ x=67
+student@T39:~/clg/user$ y=10
+student@T39:~/clg/user$ res=`expr $x = $y`
+student@T39:~/clg/user$ echo $res
+0
+student@T39:~/clg/user$ expr length "sheba" "<" 5 "|" 19 - 6 ">" 10
+1
+student@T39:~/clg/user$ x=sheba
+student@T39:~/clg/user$ len=`expr length $x`
+student@T39:~/clg/user$ echo $len
+5
+student@T39:~/clg/user$ expr --help
+Usage: expr EXPRESSION
+  or:  expr OPTION
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+Print the value of EXPRESSION to standard output.  A blank line below
+separates increasing precedence groups.  EXPRESSION may be:
+
+  ARG1 | ARG2       ARG1 if it is neither null nor 0, otherwise ARG2
+
+  ARG1 & ARG2       ARG1 if neither argument is null or 0, otherwise 0
+
+  ARG1 < ARG2       ARG1 is less than ARG2
+  ARG1 <= ARG2      ARG1 is less than or equal to ARG2
+  ARG1 = ARG2       ARG1 is equal to ARG2
+  ARG1 != ARG2      ARG1 is unequal to ARG2
+  ARG1 >= ARG2      ARG1 is greater than or equal to ARG2
+  ARG1 > ARG2       ARG1 is greater than ARG2
+
+  ARG1 + ARG2       arithmetic sum of ARG1 and ARG2
+  ARG1 - ARG2       arithmetic difference of ARG1 and ARG2
+
+  ARG1 * ARG2       arithmetic product of ARG1 and ARG2
+  ARG1 / ARG2       arithmetic quotient of ARG1 divided by ARG2
+  ARG1 % ARG2       arithmetic remainder of ARG1 divided by ARG2
+
+  STRING : REGEXP   anchored pattern match of REGEXP in STRING
+
+  match STRING REGEXP        same as STRING : REGEXP
+  substr STRING POS LENGTH   substring of STRING, POS counted from 1
+  index STRING CHARS         index in STRING where any CHARS is found, or 0
+  length STRING              length of STRING
+  + TOKEN                    interpret TOKEN as a string, even if it is a
+                               keyword like 'match' or an operator like '/'
+
+  ( EXPRESSION )             value of EXPRESSION
+
+Beware that many operators need to be escaped or quoted for shells.
+Comparisons are arithmetic if both ARGs are numbers, else lexicographical.
+Pattern matches return the string matched between \( and \) or null; if
+\( and \) are not used, they return the number of characters matched or 0.
+
+Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null
+or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/expr>
+or available locally via: info '(coreutils) expr invocation'
+student@T39:~/clg/user$ expr --version
+expr (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Mike Parker, James Youngman, and Paul Eggert.
+student@T39:~/clg/user$ read p
+sheba
+student@T39:~/clg/user$ read q
+sheba
+student@T39:~/clg/user$ s=`expr $p = $q`
+student@T39:~/clg/user$ echo $s
+1
+student@T39:~/clg/user$ r=sheba
+student@T39:~/clg/user$ sub=`expr substr $x 2 3`
+student@T39:~/clg/user$ echo $sub
+heb
+student@T39:~/clg/user$ expr shebas : sheb
+4
+student@T39:~/clg/user$ 
+

@@ -1,0 +1,179 @@
+student@T39:~$ 
+student@T39:~$ echo -n hai
+haistudent@T39:~$ echo read
+read
+student@T39:~$ read -p "enter your name"
+enter your named
+student@T39:~$ cd ajce
+student@T39:~/ajce$ cd mca
+student@T39:~/ajce/mca$ cd lmca
+student@T39:~/ajce/mca/lmca$ touch f1.txt
+student@T39:~/ajce/mca/lmca$ cat >f1.txt
+1
+2
+3
+4
+5
+6
+
+7
+8
+^C
+student@T39:~/ajce/mca/lmca$ cat f1.txt
+1
+2
+3
+4
+5
+6
+
+7
+8
+student@T39:~/ajce/mca/lmca$ ls
+f1.txt
+student@T39:~/ajce/mca/lmca$ touch f2.txt
+student@T39:~/ajce/mca/lmca$ cat >f2.txt
+p
+q
+r
+s
+u
+v
+w
+^?^C
+student@T39:~/ajce/mca/lmca$ ls
+f1.txt  f2.txt
+student@T39:~/ajce/mca/lmca$ cat f2.txt
+p
+q
+r
+s
+u
+v
+w
+student@T39:~/ajce/mca/lmca$ wc
+^C
+student@T39:~/ajce/mca/lmca$ wc f1.txt
+ 9  8 17 f1.txt
+student@T39:~/ajce/mca/lmca$ wc -l f2.txt
+7 f2.txt
+student@T39:~/ajce/mca/lmca$ wc -l f1.txt
+9 f1.txt
+student@T39:~/ajce/mca/lmca$ wc -c f1.txt
+17 f1.txt
+student@T39:~/ajce/mca/lmca$ wc -m f1.txt
+17 f1.txt
+student@T39:~/ajce/mca/lmca$ wc -L f1.txt
+1 f1.txt
+student@T39:~/ajce/mca/lmca$ 
+student@T39:~/ajce/mca/lmca$ wc -w f1.txt
+8 f1.txt
+student@T39:~/ajce/mca/lmca$ touch d3.txt
+student@T39:~/ajce/mca/lmca$ cat >d3.txt
+hai how are you?
+wlcm to my house
+tea or coffe
+what are you doing 
+^C
+student@T39:~/ajce/mca/lmca$ wc -l d3.txt
+4 d3.txt
+student@T39:~/ajce/mca/lmca$ wc -c d3.txt
+66 d3.txt
+student@T39:~/ajce/mca/lmca$ wc -m d3.txt
+66 d3.txt
+student@T39:~/ajce/mca/lmca$ wc -L d3.txt
+18 d3.txt
+student@T39:~/ajce/mca/lmca$ wc -w d3.txt
+15 d3.txt
+student@T39:~/ajce/mca/lmca$ touch d.txt
+student@T39:~/ajce/mca/lmca$ cat >d.txt
+ab cd ef 
+gh ij kl 
+mn op qr st 
+uv w x y z
+^C
+student@T39:~/ajce/mca/lmca$ cat d.txt
+ab cd ef
+gh ij kl 
+mn op qr st 
+uv w x y z
+student@T39:~/ajce/mca/lmca$ cut -c 4 d.txt
+c
+i
+o
+w
+student@T39:~/ajce/mca/lmca$ cut -c 4,6,8 d.txt
+c f
+i l
+o r
+wxy
+student@T39:~/ajce/mca/lmca$ touch f.txt
+student@T39:~/ajce/mca/lmca$ cat > f.txt
+kerala
+india 
+kottayam
+tcr
+pta 
+ernakula
+kollam
+vu;hu;bh;
+hu-gh-hg-ty-njv
+^C
+student@T39:~/ajce/mca/lmca$ cut -b 1,2,3 f.txt
+ker
+ind
+kot
+tcr
+pta
+ern
+kol
+vu;
+hu-
+student@T39:~/ajce/mca/lmca$ cut -b -l f.txt
+cut: invalid byte/character position ‘l’
+Try 'cut --help' for more information.
+student@T39:~/ajce/mca/lmca$ cut -b -1 f.txt
+k
+i
+k
+t
+p
+e
+k
+v
+h
+student@T39:~/ajce/mca/lmca$ cut -b l- f.txt
+cut: invalid byte/character position ‘l-’
+Try 'cut --help' for more information.
+student@T39:~/ajce/mca/lmca$ cut -c 1- f.txt
+kerala
+india
+kottayam
+tcr
+pta 
+ernakula
+kollam
+vu;hu;bh;
+hu-gh-hg-ty-njv
+student@T39:~/ajce/mca/lmca$ touch g6.txt
+student@T39:~/ajce/mca/lmca$ cat > g6.txt
+1	2	3	4
+a	p	r	q
+3	5	6	7	9
+4	6		7		8	9
+^C
+student@T39:~/ajce/mca/lmca$ cut -f 1 g6.txt
+1
+a
+3
+4
+student@T39:~/ajce/mca/lmca$ cut -f  g6.txt
+cut: invalid field value ‘g6.txt’
+Try 'cut --help' for more information.
+student@T39:~/ajce/mca/lmca$ cut -f 3 g6.txt
+3
+r
+6
+
+student@T39:~/ajce/mca/lmca$ 
+

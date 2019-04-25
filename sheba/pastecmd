@@ -1,0 +1,81 @@
+student@T39:~/clg/user$ cat > fil1.txt
+anu
+manu
+sinu
+ammu
+achus
+^C
+student@T39:~/clg/user$ cat > fil2.txt
+kottayam
+pta
+tvm
+ekm
+^C
+student@T39:~/clg/user$ cat > fil3.txt
+hai
+by
+how
+when
+^C
+student@T39:~/clg/user$ paste file1.txt file2.txt file3.txt
+paste: file1.txt: No such file or directory
+student@T39:~/clg/user$ paste fil1.txt fil2.txt fil3.txt
+anu	kottayam	hai
+manu	pta	by
+sinu	tvm	how
+ammu	ekm	when
+achus		
+student@T39:~/clg/user$ paste -d fil1.txt fil2.txt fil3.txt
+kottayamfhai
+ptafby
+tvmfhow
+ekmfwhen
+student@T39:~/clg/user$ paste -d "|" f1.txt f2.txt f3.txt
+kottayam|pta|pnkm
+kanoor|ekm|vazoor
+tvm|ermly|pala
+a	g	hu|kottayam|kply
+as	gg	kj|vayanad|ermly
+er	gg	jhu|ernakulam|
+	sd	dd||
+student@T39:~/clg/user$ paste -d "|" fil.txt fil.txt fil.txt
+paste: fil.txt: No such file or directory
+student@T39:~/clg/user$ paste -d "|" fil1.txt fil2.txt fil3.txt
+anu|kottayam|hai
+manu|pta|by
+sinu|tvm|how
+ammu|ekm|when
+achus||
+student@T39:~/clg/user$ paste -d "|," fil1.txt fil2.txt fil3.txt
+anu|kottayam,hai
+manu|pta,by
+sinu|tvm,how
+ammu|ekm,when
+achus|,
+student@T39:~/clg/user$ paste -s -d ":" fil1.txt fil2.txt fil3.txt
+anu:manu:sinu:ammu:achus
+kottayam:pta:tvm:ekm
+hai:by:how:when
+student@T39:~/clg/user$ paste --version
+paste (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by David M. Ihnat and David MacKenzie.
+student@T39:~/clg/user$ paste -s file1.txt
+paste: file1.txt: No such file or directory
+student@T39:~/clg/user$ paste -s fil1.txt
+anu	manu	sinu	ammu	achus
+student@T39:~/clg/user$ paste -s fil1.txt fil2.txt
+anu	manu	sinu	ammu	achus
+kottayam	pta	tvm	ekm
+student@T39:~/clg/user$ paste - - <fil1.txt
+anu	manu
+sinu	ammu
+achus	
+student@T39:~/clg/user$ paste - - - <fil1.txt
+anu	manu	sinu
+ammu	achus	
+

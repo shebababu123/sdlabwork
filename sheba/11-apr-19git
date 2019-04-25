@@ -1,0 +1,438 @@
+student@T39:~$ git init first
+Initialized empty Git repository in /home/student/first/.git/
+student@T39:~$ cd shebagit
+student@T39:~/shebagit$ git init new
+Initialized empty Git repository in /home/student/shebagit/new/.git/
+student@T39:~/shebagit$ cd new
+student@T39:~/shebagit/new$ gedit sample.c
+student@T39:~/shebagit/new$ git add sample.c
+student@T39:~/shebagit/new$ git commit -m "my new"
+[master (root-commit) e53a47e] my new
+ 1 file changed, 6 insertions(+)
+ create mode 100644 sample.c
+student@T39:~/shebagit/new$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T39:~/shebagit/new$ git remote add origin https://github.com/shebababu123/shebarepo.git
+student@T39:~/shebagit/new$ git push origin master
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 273 bytes | 273.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shebababu123/shebarepo.git
+ * [new branch]      master -> master
+student@T39:~/shebagit/new$ git commit -m "scond"
+On branch master
+Changes not staged for commit:
+	modified:   sample.c
+
+no changes added to commit
+student@T39:~/shebagit/new$ git push origin master
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+To https://github.com/shebababu123/shebarepo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/shebababu123/shebarepo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student@T39:~/shebagit/new$ git fetch master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T39:~/shebagit/new$ git fetch https://github.com/shebababu123/shebarepo
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/shebababu123/shebarepo
+ * branch            HEAD       -> FETCH_HEAD
+student@T39:~/shebagit/new$ git merge https://github.com/shebababu123/shebarepo
+merge: https://github.com/shebababu123/shebarepo - not something we can merge
+student@T39:~/shebagit/new$ git merge https://github.com/shebababu123/shebarepo/blob/master/sample.c
+merge: https://github.com/shebababu123/shebarepo/blob/master/sample.c - not something we can merge
+student@T39:~/shebagit/new$ git merge master
+Already up to date.
+student@T39:~/shebagit/new$ git fetch shebarepo
+fatal: 'shebarepo' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T39:~/shebagit/new$ git fetch origin master
+From https://github.com/shebababu123/shebarepo
+ * branch            master     -> FETCH_HEAD
+   e53a47e..1a5c914  master     -> origin/master
+student@T39:~/shebagit/new$ git merge origin master
+merge: origin - not something we can merge
+student@T39:~/shebagit/new$ git clone https://github.com/shebababu123/shebarepo
+Cloning into 'shebarepo'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+student@T39:~/shebagit/new$ git commit -m "hai"
+On branch master
+Changes not staged for commit:
+	modified:   sample.c
+
+Untracked files:
+	shebarepo/
+
+no changes added to commit
+student@T39:~/shebagit/new$ git clone https://github.com/shebababu123/shebarepo/blob/master/sample.c
+fatal: destination path 'sample.c' already exists and is not an empty directory.
+student@T39:~/shebagit/new$ git clone https://github.com/shebababu123/shebarepo/blob/master
+Cloning into 'master'...
+fatal: repository 'https://github.com/shebababu123/shebarepo/blob/master/' not found
+student@T39:~/shebagit/new$ git add sample.c
+student@T39:~/shebagit/new$ git commit -m "gai"
+[master 3513d66] gai
+ 1 file changed, 1 insertion(+)
+student@T39:~/shebagit/new$ git push origin master
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+To https://github.com/shebababu123/shebarepo.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/shebababu123/shebarepo.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student@T39:~/shebagit/new$ git pull origin master
+From https://github.com/shebababu123/shebarepo
+ * branch            master     -> FETCH_HEAD
+Auto-merging sample.c
+Merge made by the 'recursive' strategy.
+ sample.c | 1 +
+ 1 file changed, 1 insertion(+)
+student@T39:~/shebagit/new$ git push origin master
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 593 bytes | 593.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/shebababu123/shebarepo.git
+   1a5c914..8c9668a  master -> master
+student@T39:~/shebagit/new$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/shebababu123/shebarepo
+ * branch            master     -> FETCH_HEAD
+   8c9668a..3e17a26  master     -> origin/master
+Updating 8c9668a..3e17a26
+Fast-forward
+ sample.c | 1 +
+ 1 file changed, 1 insertion(+)
+student@T39:~/shebagit/new$ git branch feature
+student@T39:~/shebagit/new$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	shebarepo/
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T39:~/shebagit/new$ git branch
+  feature
+* master
+student@T39:~/shebagit/new$ git checkout branch
+error: pathspec 'branch' did not match any file(s) known to git.
+student@T39:~/shebagit/new$ git checkout feature
+Switched to branch 'feature'
+student@T39:~/shebagit/new$ git commit -m "branch"
+On branch feature
+Untracked files:
+	shebarepo/
+
+nothing added to commit but untracked files present
+student@T39:~/shebagit/new$ git checkout master
+Switched to branch 'master'
+student@T39:~/shebagit/new$ push origin master
+
+Command 'push' not found, did you mean:
+
+  command 'pwsh' from snap powershell (6.2.0)
+  command 'rush' from deb rush
+  command 'ppsh' from deb ppsh
+  command 'posh' from deb posh
+  command 'pdsh' from deb pdsh
+
+See 'snap info <snapname>' for additional versions.
+
+student@T39:~/shebagit/new$ git push origin master
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+Everything up-to-date
+student@T39:~/shebagit/new$ git push origin feature
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/shebababu123/shebarepo/pull/new/feature
+remote: 
+To https://github.com/shebababu123/shebarepo.git
+ * [new branch]      feature -> feature
+student@T39:~/shebagit/new$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	shebarepo/
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T39:~/shebagit/new$ git log
+commit 3e17a26e4e3d32b36367c85d00954a07ee9e11e5 (HEAD -> master, origin/master, origin/feature, feature)
+Author: shebababu123 <48617365+shebababu123@users.noreply.github.com>
+Date:   Thu Apr 11 15:15:02 2019 +0530
+
+    Update sample.c
+
+commit 8c9668aa1388a2792a2f30201628330f3822a69a
+Merge: 3513d66 1a5c914
+Author: shebababu123 <shebababu506@gmail.com>
+Date:   Thu Apr 11 14:56:25 2019 +0530
+
+    first pull
+    Merge branch 'master' of https://github.com/shebababu123/shebarepo
+
+commit 3513d6696c63f985832d8e6c4701720ab2f085d4
+Author: shebababu123 <shebababu506@gmail.com>
+Date:   Thu Apr 11 14:54:57 2019 +0530
+
+    gai
+
+commit 1a5c914f70c98f0822af73f8205d9f62025acbbe
+Author: shebababu123 <48617365+shebababu123@users.noreply.github.com>
+Date:   Thu Apr 11 14:31:17 2019 +0530
+
+    Update sample.c
+
+commit e53a47e3a97296df8781ae224bded9cd3b28acd6
+Author: shebababu123 <shebababu506@gmail.com>
+Date:   Thu Apr 11 14:26:44 2019 +0530
+
+    my new
+student@T39:~/shebagit/new$ git rebase
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-rebase(1) for details.
+
+    git rebase <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+student@T39:~/shebagit/new$ git rebase feature
+Current branch master is up to date.
+student@T39:~/shebagit/new$ git checkout feature
+Switched to branch 'feature'
+student@T39:~/shebagit/new$ git rebase feature
+Current branch feature is up to date.
+student@T39:~/shebagit/new$ git branch
+* feature
+  master
+student@T39:~/shebagit/new$ gedit s.c
+student@T39:~/shebagit/new$ git add s.c
+student@T39:~/shebagit/new$ git commit -m "gii"
+[feature d393674] gii
+ 1 file changed, 8 insertions(+)
+ create mode 100644 s.c
+student@T39:~/shebagit/new$ git push origin feature
+Username for 'https://github.com': shebababu123
+Password for 'https://shebababu123@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 326 bytes | 326.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shebababu123/shebarepo.git
+   3e17a26..d393674  feature -> feature
+student@T39:~/shebagit/new$ git checkout feature
+Already on 'feature'
+student@T39:~/shebagit/new$ git branch
+* feature
+  master
+student@T39:~/shebagit/new$ git checkout master
+Switched to branch 'master'
+student@T39:~/shebagit/new$ git rebase feature
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to feature.
+student@T39:~/shebagit/new$ git rebase master
+Current branch master is up to date.
+student@T39:~/shebagit/new$ git rebase feature
+Current branch master is up to date.
+student@T39:~/shebagit/new$ git branch
+  feature
+* master
+student@T39:~/shebagit/new$ git fetch origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/shebababu123/shebarepo
+ * branch            master     -> FETCH_HEAD
+   3e17a26..a2c5435  master     -> origin/master
+student@T39:~/shebagit/new$ git diff origin master
+fatal: ambiguous argument 'origin': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+student@T39:~/shebagit/new$ git diff origin/master
+diff --git a/s.c b/s.c
+new file mode 100644
+index 0000000..af18175
+--- /dev/null
++++ b/s.c
+@@ -0,0 +1,8 @@
++#include<stdio.h>
++int main()
++{
++
++printf("hello world");
++printf("hello world");
++return 0;
++}
+diff --git a/sample.c b/sample.c
+index 529b5dd..d8aacad 100644
+--- a/sample.c
++++ b/sample.c
+@@ -3,7 +3,6 @@ int main()
+ {
+   a=10;
+   y=1;
+-  printf("hai");
+ printf("hello world");
+ printf("hello world");
+ return 0;
+
+student@T39:~/shebagit/new$ git merge origin/master
+Merge made by the 'recursive' strategy.
+ sample.c | 1 +
+ 1 file changed, 1 insertion(+)
+student@T39:~/shebagit/new$ git fetch origin master
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/shebababu123/shebarepo
+ * branch            master     -> FETCH_HEAD
+   a2c5435..7e89e0d  master     -> origin/master
+student@T39:~/shebagit/new$ git diff origin/master
+diff --git a/s.c b/s.c
+new file mode 100644
+index 0000000..af18175
+--- /dev/null
++++ b/s.c
+@@ -0,0 +1,8 @@
++#include<stdio.h>
++int main()
++{
++
++printf("hello world");
++printf("hello world");
++return 0;
++}
+diff --git a/sample.c b/sample.c
+index 301fa2b..529b5dd 100644
+--- a/sample.c
++++ b/sample.c
+@@ -2,6 +2,7 @@
+ int main()
+ {
+   a=10;
++  y=1;
+   printf("hai");
+ printf("hello world");
+ printf("hello world");
+student@T39:~/shebagit/new$ git merge origin/master
+Merge made by the 'recursive' strategy.
+ sample.c | 1 -
+ 1 file changed, 1 deletion(-)
+student@T39:~/shebagit/new$ git revert HEAD
+error: commit 4b1284e74898d12176a970a3361333a79987f012 is a merge but no -m option was given.
+fatal: revert failed
+student@T39:~/shebagit/new$ git merge origin/master
+Already up to date.
+student@T39:~/shebagit/new$ git merge origin/master
+Already up to date.
+student@T39:~/shebagit/new$ git revert HEAD
+error: commit 4b1284e74898d12176a970a3361333a79987f012 is a merge but no -m option was given.
+fatal: revert failed
+student@T39:~/shebagit/new$ git fetch origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/shebababu123/shebarepo
+ * branch            master     -> FETCH_HEAD
+   7e89e0d..e7aa6b9  master     -> origin/master
+student@T39:~/shebagit/new$ git diff origin/master
+diff --git a/s.c b/s.c
+new file mode 100644
+index 0000000..af18175
+--- /dev/null
++++ b/s.c
+@@ -0,0 +1,8 @@
++#include<stdio.h>
++int main()
++{
++
++printf("hello world");
++printf("hello world");
++return 0;
++}
+diff --git a/sample.c b/sample.c
+index 39bde8a..301fa2b 100644
+--- a/sample.c
++++ b/sample.c
+@@ -2,7 +2,6 @@
+ int main()
+ {
+   a=10;
+-  Y=10
+   printf("hai");
+ printf("hello world");
+ printf("hello world");
+student@T39:~/shebagit/new$ git merge origin/master
+Merge made by the 'recursive' strategy.
+ sample.c | 1 +
+ 1 file changed, 1 insertion(+)
+student@T39:~/shebagit/new$ git revert HEAD
+error: commit 20ad916914524e19c1156bf4636787f3240fe292 is a merge but no -m option was given.
+fatal: revert failed
+student@T39:~/shebagit/new$ commit -m "hi"
+commit: command not found
+student@T39:~/shebagit/new$ git commit -m "hi"
+On branch master
+Untracked files:
+	shebarepo/
+
+nothing added to commit but untracked files present
+student@T39:~/shebagit/new$ git revert HEAD
+error: commit 20ad916914524e19c1156bf4636787f3240fe292 is a merge but no -m option was given.
+fatal: revert failed
+student@T39:~/shebagit/new$ 
+
